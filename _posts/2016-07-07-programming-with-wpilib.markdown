@@ -100,11 +100,11 @@ public class Robot extends SampleRobot {
 
 这时我们发现 `VictorSP` 下出现了红线。这说明这句语句出了问题。我们可以点击左边的小灯泡让 Eclipse 自动解决。
 
-{% img '{{ "programming-with-wpilib/bind-controller-1.png" }}' %}
+{% img '{{ "programming-with-wpilib/bind-ctrl-1.png" }}' %}
 
 双击 `Import VictorSP` 将没有包含的库包含进程序中。
 
-{% img '{{ "programming-with-wpilib/bind-controller-2.png" }}' %}
+{% img '{{ "programming-with-wpilib/bind-ctrl-2.png" }}' %}
 
 ### 编写逻辑
 
@@ -150,5 +150,40 @@ public class Robot extends SampleRobot {
 
         servo = new Servo(5);
     }
-    
+
 ```
+
+### 编写逻辑
+
+在机器人停下脚步时调用舵机转向。使用 `Timer.delay()` 等待几秒，保证舵机转到底。
+
+```java
+......
+    public void autonomous() {
+        myRobot.setSafetyEnabled(false);
+        while(true) {
+            myRobot.drive(1.0, 0);
+            Timer.delay(2);
+            myRobot.drive(0, 0);
+            servo.setAngle(0);
+            Timer.delay(2);
+            servo.setAngle(180);
+            Timer.delay(2);
+            myRobot.drive(-1.0, 0);
+            Timer.delay(2);
+            myRobot.drive(0, 0);
+            servo.setAngle(0);
+            Timer.delay(2);
+            servo.setAngle(180);
+            Timer.delay(2);
+        }
+
+    }
+
+```
+
+## 习题
+
+1. 阅读 `wpilib` [API 文档](http://first.wpi.edu/FRC/roborio/release/docs/java/)，查找获取 `Servo` 现在的旋转角度的函数，将原来的 `Timer.delay(2)` ，改成使用 `while` 循环等待舵机转到指定角度。
+
+2. 尝试绑定 `Joystick` 手柄，当手柄按钮按下时再开始扫地。相关文档可以在 [wpilib 官网](http://wpilib.screenstepslive.com/s/4485/m/13809/l/241881-joysticks) 或 *Java Programming Guide PDF* 中找到。
