@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+.jumbotron-bg-white {
+  background-color: transparent;
+}
+
+.jumbotron-bg-pic {
+  border-radius: 0;
+  h1, .lead {
+    color: white;
+  }
+  .lead {
+    font-weight: bold;
+  }
+}
+
+.jumbotron-cover {
+  margin: 0 !important;
+  min-height: 50rem;
+  padding-top: 30rem;
+}
+
+.bg-blur {
+  padding: 2rem;
+  background-color: rgba(0,0,0,0.5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif !important;
+}
+
+body {
+  margin-bottom: 3rem;
+}
+
+.frc-index-pic-1 {
+  background-image: url(asset_path("50960B92877D8824C7FB7F0510B081BB.jpg"));
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.frc-index-pic-2 {
+  background-image: url(asset_path("F90DBD51A8710BAD39F002689969CC51.jpg"));
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #f5f5f5;
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.post-content {
+  font-size: 18px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
