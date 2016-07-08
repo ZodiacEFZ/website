@@ -26,7 +26,7 @@ tags: zc大哥哥的编程干货 FRC@EFZ 机器人 Java
 
 {% img '{{ "programming-with-wpilib/create-project-3.png" }}' %}
 
-填写项目名。
+填写项目名，选择 Sample Robot。
 
 {% img '{{ "programming-with-wpilib/create-project-4.png" }}' %}
 
@@ -111,7 +111,6 @@ public class Robot extends SampleRobot {
 *SkyZH* 让机器人在房间里前进两秒，停两秒扫地，后退两秒，再停止两秒，不断循环。
 
 ```java
-......
     public void autonomous() {
         myRobot.setSafetyEnabled(false);
         while(true) {
@@ -158,7 +157,6 @@ public class Robot extends SampleRobot {
 在机器人停下脚步时调用舵机转向。使用 `Timer.delay()` 等待几秒，保证舵机转到底。
 
 ```java
-......
     public void autonomous() {
         myRobot.setSafetyEnabled(false);
         while(true) {

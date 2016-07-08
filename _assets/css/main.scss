@@ -2,6 +2,11 @@
 
 $min_width: 544px;
 
+.jumbotron-title {
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
 .jumbotron-bg-white {
   background-color: transparent;
 }
@@ -11,13 +16,17 @@ $min_width: 544px;
   h1 {
     display: inline-block;
     background-color: #fff;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-bottom: 1rem;
   }
   .lead {
     color: white;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
+  }
+  .btn-info-outline {
+    color: white;
+    border-color: white;
   }
 }
 
@@ -44,7 +53,7 @@ body {
 }
 
 .frc-index-pic-0 {
-  @media (min-width: 544px) {
+  @media (min-width: $min_width) {
     padding-top: 30rem;
   }
   background-image: url(asset_path("26c128bcd4d83716.jpg"));
@@ -96,4 +105,9 @@ html {
     max-width: 100%;
     height: auto;
   }
+}
+
+.navbar-main {
+  padding: 1.5rem 1rem;
+  box-shadow: 0 1px 1px #c2c2c2;
 }
