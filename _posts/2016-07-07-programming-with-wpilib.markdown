@@ -34,7 +34,7 @@ tags: zc大哥哥的编程干货 FRC@EFZ 机器人 Java
 
 {% img '{{ "programming-with-wpilib/create-project-5.png" }}' %}
 
-在 `Project Explorer` 中找到刚才创建项目中的 `Robot.java`
+在 `Package Explorer` 中找到刚才创建项目中的 `Robot.java`
 
 ## 编写逻辑
 

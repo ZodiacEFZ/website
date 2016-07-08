@@ -1,0 +1,180 @@
+---
+layout: post
+title:  "Xenial 的代码仓库 · 使用 git"
+date:   2016-07-08 17:08:16 +0800
+categories: programming
+tags: zc大哥哥的编程干货 FRC@EFZ 机器人 Java
+---
+
+## 下载与安装
+
+git 是一个源代码管理工具。我们可以使用图形化界面的 git 进行源代码管理。
+
+在 [git 官网](https://git-scm.com/) 下载。点击 `Downloads for Windows` 即可。
+
+{% img '{{ "using-git/download-1.png" }}' %}
+
+安装全部采用默认选项即可。
+
+{% img '{{ "using-git/install-1.png" }}' %}
+
+{% img '{{ "using-git/install-2.png" }}' %}
+
+{% img '{{ "using-git/install-3.png" }}' %}
+
+{% img '{{ "using-git/install-4.png" }}' %}
+
+{% img '{{ "using-git/install-5.png" }}' %}
+
+{% img '{{ "using-git/install-6.png" }}' %}
+
+## 注册 GitHub 账号 & 设置密钥
+
+在 [GitHub](https://github.com) 上注册你的账号，请记住邮箱、用户名。
+
+点击右上头像 - `Settings`。
+
+{% img '{{ "using-git/use-github-1.png" }}' %}
+
+选择 `SSH and GPG keys`，点击 `New SSH Key`。
+
+{% img '{{ "using-git/use-github-2.png" }}' %}
+
+在 `C:\Users\<用户名>\workspace` (即你的 Eclipse 的 workspace 位置) 内点击右键打开 `Git GUI`。
+
+{% img '{{ "using-git/use-github-3.png" }}' %}
+
+选择 `Show SSH Key`。
+
+{% img '{{ "using-git/use-github-4.png" }}' %}
+
+选择 `Generate Key` 密码留空点 OK。
+
+{% img '{{ "using-git/use-github-5.png" }}' %}
+
+将文本框内密钥拷贝到 GitHub 上，点击 `Add SSH Key`。输入密码即可。
+
+{% img '{{ "using-git/use-github-6.png" }}' %}
+
+{% img '{{ "using-git/use-github-7.png" }}' %}
+
+现在你就可以不用输入密码，通过这个 SSH 密钥连接到远程的代码仓库了。
+
+## Xenial 的代码仓库
+
+*Xenial* 使用一种非常高级的仓库管理程序。仓库建在一个名为 *被遗忘的角落* 的城区。
+这里的人们天天只穿着运动鞋、鸭舌帽、短袖、牛仔裤，背着双肩包。
+每天都坐在 *Xenialware* 前编程序。仓库就在 *被遗忘的角落* 的中心地带。
+
+*Xenial* 星人使用一种非常高级的方法编程序。他们使用 *XBrick* 编写程序。
+*Xenial* 星人将不同类型的方块按特定的顺序排列好，然后就能使用 *Xenialware* 执行程序。
+他们用 *git* 这种高级的运输工具将方块运输到中心仓库。
+
+*git* 将每一次向仓库存数据的 **内容** 叫做 `Commit(提交)`。
+`Commit` 保存了程序相对于上次提交更改的部分。
+创建了一个 `Commit` 后，*git* 通过 `Push (推送)` 的方式将 `Commit` 从本地运输到远程仓库。
+如果远程仓库无法接受这次 `Commit`，它就不能被成功 `Push`。
+*Xenial* 星人于是不得不将远程仓库的所有 `Commit` 拉取下来 `Merge (合并)` 到自己的程序里，
+再尝试提交。
+
+后来这套机制也被用在人类的代码管理上。人类使用 `git` 建设了分布式的源代码管理库。
+
+## 获取代码仓库 & 提交更改。
+
+在 Eclipse workspace 文件夹内右键打开 `Git GUI`，点击 `Clone Existing Repository`。
+
+{% img '{{ "using-git/clone-1.png" }}' %}
+
+输入远程仓库的地址 `git@github.com:SkyZH/BreezeRobot.git`，以及目标目录 `BreezeRobot`。
+点击 `Clone`。
+
+**注意：这个远程仓库需要经过授权才能访问。请联系 SkyZH。**
+
+{% img '{{ "using-git/clone-2.png" }}' %}
+
+可能会出现一个弹框询问是否要信任 `GitHub`，输入 `yes` 点击 OK。
+
+以后都可以在 `workspace/BreezeRobot` 目录下右击 - `Git GUI` 打开 `仓库管理视图`。
+
+{% img '{{ "using-git/clone-3.png" }}' %}
+
+现在我们将这个项目导入到 Eclipse 中。选择 `File` - `Import`。
+
+{% img '{{ "using-git/import-1.png" }}' %}
+
+选择 `Existing Projects into Workspace`。
+
+{% img '{{ "using-git/import-2.png" }}' %}
+
+点击 `Browse...` 选择目录，点击 Finish 即可完成导入。
+在左侧 `Package Explorer` 中就能找到导入的项目。
+
+{% img '{{ "using-git/import-3.png" }}' %}
+
+现在在 Eclipse 中随便编辑一个文件，比如 `Robot.java`。保存后回到 `Git GUI`。
+点击 `Rescan` - `Stage Changed`
+
+{% img '{{ "using-git/push-1.png" }}' %}
+
+在 `Commit Message` 中输入本次提交的说明。 (*比如：Add xxx, Modify xxx, Delete xxx*)
+然后点击 `Commit`，再点击 `Push`。
+
+{% img '{{ "using-git/push-2.png" }}' %}
+
+再次点击 `Push` 即可。
+
+{% img '{{ "using-git/fix-error-4.png" }}' %}
+
+绿色代表推送成功。然后在项目的 [GitHub 主页](https://github.com/SkyZH/BreezeRobot/) 上就可以看到最新的程序。
+点击 `xx Commits` 可以看到你提交的记录。
+
+那么 `Rescan`, `Stage`, `Commit`, `Push` 分别有什么作用呢？
+
+`Rescan` 扫描所有被修改过的文件。
+
+{% img '{{ "using-git/push-3.png" }}' %}
+
+`Stage` 将修改过的文件记录下来。
+
+{% img '{{ "using-git/push-4.png" }}' %}
+
+`Commit` 把本地的程序保存到本地的代码仓库中。
+
+{% img '{{ "using-git/push-5.png" }}' %}
+
+`Push` 将本地代码仓库同步到远程代码仓库中。
+
+{% img '{{ "using-git/push-6.png" }}' %}
+
+## 修复错误
+
+如果在点击 `Push` 看到如下视图，这意味着你的本地仓库并不是最新的。
+
+{% img '{{ "using-git/fix-error-1.png" }}' %}
+
+点击 `Remote` - `Fetch from` - `origin`。
+
+{% img '{{ "using-git/fix-error-2.png" }}' %}
+
+成功后点击 `Merge` - `Local Merge`
+
+{% img '{{ "using-git/fix-error-3.png" }}' %}
+
+成功后再点击 Push 即可。
+
+{% img '{{ "using-git/fix-error-4.png" }}' %}
+
+然后在项目的 [GitHub 主页](https://github.com/SkyZH/BreezeRobot/) 上就可以看到最新的程序。
+
+## 修复不了错误
+
+在项目根目录下右键 - `Git Bash`，输入：
+
+```
+> git reset --hard
+> git pull origin master
+```
+
+{% img '{{ "using-git/fix-error-5.png" }}' %}
+
+**你本地所作的所有更改会全部消失，变成远程代码仓库的最新代码**

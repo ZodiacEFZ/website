@@ -85,7 +85,7 @@ public class Xenial {
 }
 ```
 
-我们可以在主程序创建该类的对象。
+我们可以在主程序创建该类的对象。调用 `new Xenial()` 时实际上给这个变量分配了内存，并调用了构造函数 `Xenial()`。
 
 ```java
 public class XenialMain {
@@ -122,6 +122,25 @@ public class XenialMain {
 而内向的人只会犹犹豫豫地交流自己的性别。
 
 ### 类的继承
+
+每个 `Xenial` 都会心灵♂交流。我们在基类 `Xenial` 中定义 `say` 函数。
+
+```java
+public class Xenial {
+	protected int gender, age;
+	protected String name;
+	public int appearance;
+	private int TNA;
+
+	public Xenial() {
+		gender = 0; age = 0; name = ""; TNA = 0;
+	}
+
+	public String say() {
+		return "";
+	}
+}
+```
 
 创建 `StraightXenial` 类来代表豪爽的人。我们要 **重写** 他的 `say` 函数。
 
@@ -166,7 +185,9 @@ public class XenialMain {
 I'm 0 years old. I'm 0.
 ```
 
-因此**对象的行为取决于创建对象时的类，而不是保存类的变量类型本身**。这也是类的多态性的体现。
+因此**对象的行为取决于创建对象时的类，而不是保存类的变量类型本身**。
+即使是使用 `Xenial` 类型保存一个用 `StraightXenial` 初始化的对象，
+调用的也是 `StraightXenial` 的函数和成员变量。这也是类的多态性的体现。
 
 ## 构造函数
 

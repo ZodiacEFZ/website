@@ -86,7 +86,7 @@ tags: zc大哥哥的编程干货 FRC@EFZ 机器人 Java
                 servo.setAngle(180);
                 int __timer = milliseconds();
                 while(milliseconds() - __timer <= 1 && button1.isHeld());
-                if(button1.isHead()) {
+                if(button1.isHeld()) {
                     servo.setAngle(0);
                     while(milliseconds() - __timer <= 1 && button1.isHeld());
                 }
@@ -171,7 +171,7 @@ tags: zc大哥哥的编程干货 FRC@EFZ 机器人 Java
 
 子系统绑定了机器人的各个部件，比如马达、舵机，并把它抽象成机械臂、发射塔等装置，提供更加简单接口。
 
-在 `subsystems` 包中右键新建，选择 `Others`。
+在 `org.usfirst.frc.teamxxxx.robot.subsystems` 包中右键新建，选择 `Others`。
 
 {% img '{{ "command-based-robot/tutorial-5.png" }}' %}
 
@@ -202,15 +202,15 @@ public class XenSubsystem extends Subsystem {
 }
 ```
 
-接下来要在 OI 中创建 xen 对象。
+接下来要在 `OI` 中创建 `xen` 对象。
 
 ```java
 public class OI {
-    VictorSP xen = new VictorSP(RobotMap.MotorXenPort);
+    public VictorSP xen = new VictorSP(RobotMap.MotorXenPort);
 }
 ```
 
-最后在 RobotMap 中指定端口号。
+最后在 `RobotMap` 中指定端口号。
 
 ```java
 public class RobotMap {
@@ -218,4 +218,138 @@ public class RobotMap {
 }
 ```
 
-在创建 XenSubsystem 对象后，我们就可以调用 `xen.forward()` 等函数了。
+在创建 `XenSubsystem` 对象后，我们就可以调用 `xen.forward()` 等函数了。在 `Robot` 中创建 `Subsystem`。
+
+```java
+public class Robot extends IterativeRobot {
+
+	public static final XenSubsystem xenSubsystem = new XenSubsystem();
+```
+
+### Command (指令)
+
+我们可以使用指令控制子系统。在 `org.usfirst.frc.teamxxxx.robot.commands` 包中右键新建，选择 `Others`。
+选择 `Command`，输入名称即可创建指令。
+
+```java
+public class XenCommand extends Command {
+
+    public XenCommand() {
+    }
+
+    protected void initialize() {
+    }
+
+    protected void execute() {
+    }
+
+    protected boolean isFinished() {
+        return false;
+    }
+
+    protected void end() {
+    }
+
+    protected void interrupted() {
+    }
+}
+```
+
+在 `XenCommand` 中有以下几个成员函数。
+
+`XenCommand()` 是类的构造函数。在这里使用 `requires(...)` 声明这个类所需要的子系统。
+
+`initialize()` 是初始化函数。第一次运行这个指令时会执行它。
+
+*为什么又要初始化函数又要构造函数？类在创建对象时，机器人的各个部件可能还没有初始化好。
+要等机器人的事件系统完全运行时才能初始化。*
+
+`execute()` 指令执行过程中不断调用这个函数。
+
+`isFinished()` 用于判断指令是否结束了。一般这里可以写“角度大于 180”或“时间到了”之类的语句。
+
+`end()` 是指令执行完毕后需要调用的函数。
+
+`interrupted()` 是指令被中断时调用的函数。比如手柄按钮按住时执行一个指令，指令没有执行完就松开了手柄，就会调用它。
+
+`XenCommand` 要实现 *XEN* 的转动。我们将这一操作抽象成 `Command`:
+
+初始操作：转动 *XEN* 器官。    
+结束条件：指令执行了两秒。    
+终止操作：停止旋转 *XEN* 器官。
+
+可以使用 `setTimeout(double seconds)` 设定定时器，`isTimedOut()` 判断是否到时间。
+
+```java
+public class XenCommand extends Command {
+
+    public XenCommand() {
+        requires(Robot.xenSubsystem); //声明依赖
+    }
+
+    protected void initialize() {
+    	setTimeout(2);
+    	Robot.xenSubsystem.forward();
+    }
+
+    protected void execute() {
+    }
+
+     protected boolean isFinished() {
+        return isTimedOut();
+    }
+
+    protected void end() {
+    	Robot.xenSubsystem.stop();
+    }
+
+
+    protected void interrupted() {
+    }
+}
+```
+
+最后在 `Robot` 中将这个指令设定为自动阶段的默认指令。
+
+```java
+    public void autonomousInit() {
+        autonomousCommand = new XenCommand();
+        autonomousCommand.start();
+    }
+```
+
+### 最后的话
+
+FRC 机器人的 Command-based Robot 模式在国外的队伍中广泛使用。它的模块化、组件化的特点使得程序架构变得清楚，维护起来也更加方便。
+
+除了 `Robot` 引导机器人主程序，`OI` 保存机器人所有的控制器传感器对象，`RobotMap` 保存所有常量、端口映射以外，
+`Subsystem` 提供了抽象的功能，可以将一个控制器原来的十几个函数变成所需要的几个甚至一个函数，并增加可读性。
+(比如将 `VictorSP` 抽象为 `XenSubsystem`)。而 `Command` 提供了操作 `Subsystem` 的可能，
+使得我们可以通过发送指令的方式**非阻塞地**执行命令，并且轻松地执行命令组。
+
+## 练习
+
+1.  自学 `CommandGroup`。创建一个指令组，让 `XEN` 正转两秒，反转两秒。    
+    [教程](http://wpilib.screenstepslive.com/s/4485/m/13809/l/241903-creating-groups-of-commands)
+    [文档](http://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/command/CommandGroup.html)
+2.  创建一个待机指令，相当于 `Timer.delay()`，让 `XEN` 正传两秒，停两秒，反转两秒。    
+    提示：想一想如何将一个操作抽象成 `Command`? 一个 `Command` 要有哪些要素？
+3.  修改这个待机指令的构造函数，使得创建指令对象时可以指定待机指令的待机时长。让 `XEN` 正传两秒，停两秒，反转两秒，停三秒，正转两秒。        
+    提示：最后应该有这两句语句 `addSequential(new SuspendCommand(2))` `addSequential(new SuspendCommand(3))`
+4.  自行查阅 `Subsystem` 相关文档，让 `XenSubsystem` 在没有任何指令执行的情况下执行一个默认指令 (Default Command)，让 *XEN* 反转。
+5.  尝试添加更多的控制器，比如底盘。    
+    提示：回忆一下创建一个控制器需要依次更改哪些类？创建一个指令需要依次更改哪些类？
+5.  学习使用并行执行指令组 (Parallel)，实现 `XEN` 正方向转动两秒的同时让扫地机器人的底盘行走。
+6.  (选做) 尝试自己阅读传感器相关文档，创建一个基于陀螺仪 *Gyro* 的 `PIDSubsystem`。    
+    提示：`WPILib sensors` 章节中讲传感器的用法，而 `PIDSubsystem` 将如何创建传感器的子系统。
+7.  (选做) 添加底盘的默认指令，添加手柄，默认情况下底盘用手柄控制。
+
+请善用下列资料：
+
+[Java Programming Guide - Command-based Programming 在线版](http://wpilib.screenstepslive.com/s/4485/m/13809/c/88893)
+
+[WPILib API Reference 在线版](http://first.wpi.edu/FRC/roborio/release/docs/java/)
+
+第一个文档有 PDF 版。第二个文档可以在 Eclipse 中展开 `WPILib` 包查看。
+
+{% img '{{ "command-based-robot/api-reference-1.png" }}' %}
