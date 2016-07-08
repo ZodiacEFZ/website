@@ -2,13 +2,6 @@
   <div class="container">
     <ul class="list-inline">
       <li class="list-inline-item">由 FRC@EFZ 维护</li>
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-        <li class="list-inline-item">
-          <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-        </li>
-        {% endif %}
-      {% endfor %}
       <li class="list-inline-item"><a class="text-xs-right" href="http://www.miitbeian.gov.cn/">沪ICP备05003394号-12</a></li>
     </ul>
   </div>

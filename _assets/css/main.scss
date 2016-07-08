@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$min_width: 544px;
+
 .jumbotron-bg-white {
   background-color: transparent;
 }
@@ -19,9 +21,18 @@
   }
 }
 
+.right-block {
+  display: block;
+  float: right;
+  clear: right;
+}
+
 .jumbotron-cover {
   margin: 0 !important;
   min-height: 100vh;
+  @media (max-width: 544px) {
+    min-height: 100vw;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,15 +44,19 @@ body {
 }
 
 .frc-index-pic-0 {
-  padding-top: 30rem;
-  background-image: url(asset_path("school.jpg"));
+  @media (min-width: 544px) {
+    padding-top: 30rem;
+  }
+  background-image: url(asset_path("26c128bcd4d83716.jpg"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
 
 .frc-index-pic-1 {
-  padding-top: 30rem;
+  @media (min-width: $min_width) {
+    padding-top: 30rem;
+  }
   background-image: url(asset_path("36684c992737d145.jpg"));
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,7 +64,9 @@ body {
 }
 
 .frc-index-pic-2 {
-  padding-top: 5rem;
+  @media (min-width: $min_width) {
+    padding-top: 5rem;
+  }
   background-image: url(asset_path("5d9a62d92cd6a7cd.jpg"));
   background-repeat: no-repeat;
   background-size: cover;
