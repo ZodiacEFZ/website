@@ -15,57 +15,57 @@ $min_width: 544px;
   border-radius: 0;
   h1 {
     display: inline-block;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.85);
     padding: 1rem 2rem;
     margin-bottom: 1rem;
   }
   .lead {
     color: white;
-    font-weight: bold;
     text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
   }
   .btn-info-outline {
     color: white;
     border-color: white;
   }
-}
-
-.right-block {
-  display: block;
-  float: right;
-  clear: right;
+  background-color: transparent;
 }
 
 .jumbotron-cover {
   margin: 0 !important;
-  min-height: 100vh;
-  @media (max-width: 544px) {
-    min-height: 100vw;
+}
+
+.fullpage-index {
+  .jumbotron-cover {
+    img {
+      min-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+    @media(max-width: $min_width) {
+      h1.display-3 {
+        font-size: 2.5rem;
+      }
+    }
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif !important;
+  font-family: "Amiko", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif !important;
 }
 
 body {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  font-family: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .frc-index-pic-0 {
-  @media (min-width: $min_width) {
-    padding-top: 30rem;
-  }
-  background-image: url(asset_path("IMG_9923.jpg"));
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(asset_path("mask.png")), url(asset_path("26c128bcd4d83716.jpg"));
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
   background-position: top center;
 }
 
 .frc-index-pic-1 {
-  @media (min-width: $min_width) {
-    padding-top: 30rem;
-  }
   background-image: url(asset_path("36684c992737d145.jpg"));
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,9 +73,6 @@ body {
 }
 
 .frc-index-pic-2 {
-  @media (min-width: $min_width) {
-    padding-top: 5rem;
-  }
   background-image: url(asset_path("5d9a62d92cd6a7cd.jpg"));
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,8 +88,8 @@ html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 5rem;
-  line-height: 5rem;
+  height: 3rem;
+  line-height: 3rem;
   background-color: #f5f5f5;
   ul {
     margin-bottom: 0;
@@ -109,5 +106,44 @@ html {
 
 .navbar-main {
   padding: 1.5rem 1rem;
-  box-shadow: 0 1px 1px #c2c2c2;
+}
+
+#navbar-index {
+  a {
+    color: rgba(0,0,0,0.8);
+    display: inline-block;
+    transition: padding 0.3s ease-out, background-color 0.5s ease-out;
+    &.active {
+      background-color: rgba(2,117,216,0.8);
+      padding-left: 2rem;
+      padding-right: 2rem;
+      color: #fff;
+    }
+    background-color: transparent;
+    border-radius: 2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  background-color: rgba(255,255,255,0.5);
+  padding: 1rem 1rem;
+}
+
+#footer-index {
+  ul {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 1rem;
+  }
+}
+
+.fullpage-index {
+  .fp-controlArrow {
+    &.fp-prev {
+      border-color: transparent #0275d8 transparent transparent !important;
+    }
+    &.fp-next {
+      border-color: transparent transparent transparent #0275d8 !important;
+    }
+  }
 }

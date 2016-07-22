@@ -1,54 +1,87 @@
 ---
-layout: default
+layout: default-main
 ---
-<div class="jumbotron jumbotron-bg-white">
-  <div class="container">
-    <h1 class="display-3">走向人生巅峰</h1>
-    <p class="lead">我们没有队名，也没有队徽，不过真的没有关系。</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">加入 FRC@EFZ <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-    </p>
+{% include main-header.html %}
+
+<div id="fullpage" class="fullpage-index">
+  <div class="section frc-index-pic-1">
+    <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-pic">
+      <div class="container">
+        <h1 class="display-3" style="letter-spacing: 0.7rem">ZODIAC</h1>
+        <p class="lead">Team 9036. Founded in May, 2016.</p>
+        <p>
+          <a class="btn btn-info-outline btn-lg" role="button" href="#pgFRC">Learn More <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Zodiac</h1>
+            <p class="lead">
+              Zodiac is a new FRC team set up in May, 2016. Now there are more than 15 team members.
+            </p>
+            <p class="lead">
+              <a class="btn btn-info-outline btn-lg m-b-1" href="#pgFRC/members" role="button">Members <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+              <a class="btn btn-info-outline btn-lg m-b-1" href="#pgFRC/robot" role="button">Our Robot <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+              <a class="btn btn-info-outline btn-lg m-b-1" href="#pgFRC/robot" role="button">Activities <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+            </p>
+            <hr class="m-y-3 m-x-1">
+            <h1>First Robotics Competition</h1>
+            <p class="lead">
+              For Inspiration and Recognition of Science and Technology.
+            </p>
+            <p class="lead">
+              <a class="btn btn-info-outline btn-lg" href="http://www.firstinspires.org/about/at-a-glance" role="button">At a glance <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="p-a-3">{% img '{{ "first-logo.jpg" }}' %}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section frc-index-pic-0">
+    <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-pic">
+      <div class="container text-xs-right">
+        <h1 class="display-3">From <small style="letter-spacing: -0.2rem;">No.2 HS of ECNU</small></h1>
+        <div class="col-md-6 col-md-offset-6">
+          <p class="lead">
+            <small>Well known for its outstanding performance in international, continental, national and regional science contests.</small>
+          </p>
+        </div>
+        <p>
+          <a class="btn btn-info-outline btn-lg" role="button" href="http://www.hsefz.cn">Website <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-white">
+      <div class="container">
+        <div class="col-md-6">
+          <h1 class="display-3">Sponsors</h1>
+          <p>Currently there are no sponsors. You may find them out later.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-{% assign title_0 = "来自华师大二附中" %}
-<div class="jumbotron jumbotron-title hidden-sm-up"><h1>{{ title_0 }}</h1></div>
-<div class="jumbotron jumbotron-cover jumbotron-bg-pic frc-index-pic-0">
-  <div class="container">
-    <h1 class="display-3 right-block hidden-xs-down">{{ title_0 }}</h1>
-    <p class="lead right-block">创建于 1958 年，长期坚持“以质量立校，以科研兴校，以改革创新发展学校”的办学理念。</p>
-    <p class="right-block">
-      <a class="btn btn-info-outline btn-lg" href="http://www.hsefz.cn" role="button">去校园网 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-    </p>
-  </div>
-</div>
-{% assign title_1 = "萌萌哒的队员们" %}
-<div class="jumbotron jumbotron-title hidden-sm-up"><h1>{{ title_1 }}</h1></div>
-<div class="jumbotron jumbotron-cover jumbotron-bg-pic frc-index-pic-2">
-  <div class="container">
-    <h1 class="display-3 hidden-xs-down">{{ title_1 }}</h1>
-    <div><p class="lead">我不知道该怎么编下去了。</p></div>
-    <p>
-      <a class="btn btn-info-outline btn-lg" href="#" role="button">了解队员 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-    </p>
-  </div>
-</div>
-{% assign title_2 = "很厉害的机器人" %}
-<div class="jumbotron jumbotron-title hidden-sm-up"><h1>{{ title_2 }}</h1></div>
-<div class="jumbotron jumbotron-cover jumbotron-bg-pic frc-index-pic-1">
-  <div class="container">
-    <h1 class="display-3 right-block hidden-xs-down">{{ title_2 }}</h1>
-    <div class="right-block"><p class="lead">刚刚拼装好底盘，据说很厉害。它也没有名字。</p></div>
-    <p class="right-block">
-      <a class="btn btn-info-outline btn-lg" href="#" role="button">了解更多 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-    </p>
-  </div>
-</div>
-<div class="jumbotron jumbotron-bg-white">
-  <div class="container">
-    <h1 class="display-3">遇见</h1>
-    <p class="lead">一个全新的你。</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">加入 FRC@EFZ <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-    </p>
-  </div>
-</div>
+<nav class="navbar navbar-light navbar-fixed-bottom text-md-right text-xs-center hidden-sm-down" id="footer-index">
+  <ul class="list-inline">
+    <span class="hidden-sm-down">
+      {% include custom-footer.html %}
+      <span>  |  </span>
+    </span>
+    {% include nav-list.html %}
+  </ul>
+</nav>
+<ul class="list-inline text-xs-center hidden-md-up">
+  {% include nav-list.html %}
+</ul>
+{% include scripts.html %}
+{% js "index.js" %}

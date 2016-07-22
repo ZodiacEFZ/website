@@ -1,13 +1,5 @@
 <header>
   <nav class="navbar navbar-light navbar-main">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-frc-efz-main">
-      &#9776;
-    </button>
-    <div class="collapse navbar-toggleable-xs" id="navbar-frc-efz-main">
-      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="{{ '/post.html' | prepend: site.baseurl }}">文章</a>
-      </div>
-    </div>
+    {% include custom-header.html %}
   </nav>
 </header>
