@@ -31,6 +31,6 @@ $(document).ready(function() {
     verticalCentered: true,
     sectionsColor : ['#ccc', '#fff'],
     responsiveWidth: 544,
-    responsiveHeight: 0,
+    responsiveHeight: 650,
   });
 });

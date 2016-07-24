@@ -1,5 +1,5 @@
-<header class="hidden-md-down">
-  <nav class="navbar navbar-light navbar-fixed-top navbar-main" id="navbar-index">
+<header>
+  <nav class="navbar navbar-light navbar-fixed-top navbar-main hidden-md-down navbar-index" id="navbar-index">
     <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
     <div class="nav navbar-nav">
       <a class="nav-item nav-link" data-menuanchor="pgIntro" href="#pgIntro">Welcome</a>
@@ -10,5 +10,8 @@
       <a class="nav-item nav-link" data-menuanchor="pgHsefz" href="#pgHsefz">School</a>
       <a class="nav-item nav-link" data-menuanchor="pgSponsor" href="#pgSponsor">Sponsors</a>
     </div>
+  </nav>
+  <nav class="navbar navbar-light navbar-fixed-top navbar-main hidden-lg-up navbar-index">
+    {% include custom-header.html %}
   </nav>
 </header>

@@ -183,7 +183,7 @@ SkyZH 想，我们也能利用这种 **指令系统** 完成上面的扫地机�
 ```java
 public class XenSubsystem extends Subsystem {
 
-    VictorSP xen = Robot.oi.xen;
+    VictorSP xen = new VictorSP(RobotMap.MotorXenPort);
 
     public void initDefaultCommand() {
     }
@@ -199,14 +199,6 @@ public class XenSubsystem extends Subsystem {
     public void stop() {
     	xen.set(0);
     }
-}
-```
-
-接下来要在 `OI` 中创建 `xen` 对象。
-
-```java
-public class OI {
-    public VictorSP xen = new VictorSP(RobotMap.MotorXenPort);
 }
 ```
 
@@ -322,10 +314,12 @@ public class XenCommand extends Command {
 
 FRC 机器人的 Command-based Robot 模式在国外的队伍中广泛使用。它的模块化、组件化的特点使得程序架构变得清楚，维护起来也更加方便。
 
-除了 `Robot` 引导机器人主程序，`OI` 保存机器人所有的控制器传感器对象，`RobotMap` 保存所有常量、端口映射以外，
+除了 `Robot` 引导机器人主程序，`OI` 保存机器人所有的手柄相关设置，`RobotMap` 保存所有常量、端口映射以外，
 `Subsystem` 提供了抽象的功能，可以将一个控制器原来的十几个函数变成所需要的几个甚至一个函数，并增加可读性。
 (比如将 `VictorSP` 抽象为 `XenSubsystem`)。而 `Command` 提供了操作 `Subsystem` 的可能，
 使得我们可以通过发送指令的方式**非阻塞地**执行命令，并且轻松地执行命令组。
+
+UPDATE: 由于 `OI` 对象创建时机器人还没有完全初始化完毕，因此传感器、控制器对象直接在 `Subsystem` 中创建。相关代码已修改。
 
 ## 练习
 
