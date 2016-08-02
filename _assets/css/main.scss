@@ -19,6 +19,9 @@ $min_width: 544px;
     padding: 1rem 2rem;
     margin-bottom: 1rem;
   }
+  h2 {
+    color: #fff;
+  }
   .lead {
     color: white;
     text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
@@ -66,9 +69,9 @@ body {
 }
 
 .frc-index-pic-1 {
-  background-image: url(asset_path("36684c992737d145.jpg"));
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(asset_path("mask.png")), url(asset_path("36684c992737d145.jpg"));
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
   background-position: top center;
 }
 
@@ -114,7 +117,7 @@ html {
     display: inline-block;
     transition: padding 0.3s ease-out, background-color 0.5s ease-out;
     &.active {
-      background-color: rgba(2,117,216,0.8);
+      background-color: rgba(240,173,78,0.8);
       padding-left: 2rem;
       padding-right: 2rem;
       color: #fff;
@@ -137,6 +140,9 @@ html {
     background-color: rgba(255,255,255,0.7);
     border-radius: 1rem;
   }
+  a {
+    color: #f0ad4e;
+  }
 }
 
 .fullpage-index {
@@ -148,4 +154,16 @@ html {
       border-color: transparent transparent transparent #0275d8 !important;
     }
   }
+}
+
+.main-icon {
+  img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+}
+
+.post-content {
+  line-height: 1.7;
 }

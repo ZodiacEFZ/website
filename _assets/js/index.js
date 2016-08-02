@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     menu: '#navbar-index',
     lockAnchors: false,
-    anchors:['pgIntro', 'pgFRC', 'pgHsefz', 'pgSponsor'],
+    anchors:['intro', 'frc', 'hsefz', 'sponsor', 'contact'],
     navigation: true,
     navigationPosition: 'right',
     showActiveTooltip: false,

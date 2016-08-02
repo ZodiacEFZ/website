@@ -8,7 +8,7 @@
 # Site settings
 title: Team 9036 | Zodiac
 email:
-description: ZODIAC
+description: Team 9036 Zodiac is an FRC Team set up in May, 2016.
 baseurl: ""
 url: "http://frc.hsefz.org"
 
@@ -17,6 +17,7 @@ markdown: kramdown
 
 gems:
   - jekyll-assets
+  - jekyll-sitemap
 
 assets:
   compress:
