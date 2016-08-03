@@ -19,6 +19,9 @@ env:
   - secure: tWazkiFekTho62KqayphDwoj8FIuKAD+i+e4O6yFw8llhkOXFFs6YTiMaFYjSfOO7isgkrWCGMrdagGZCqozkBgsUrQVThhiayj8/zr1lYJiNB4a+ZlY8j3Nvhp2wNu17uIdaCM65VQk7oJeafsgc7amqiv2irXxqcxzvoPiucza4bioVStO9hUnbpWyHc2UOuV9eodfqGxfoehnlsyDgZaPhtQUy3hLJ6L5VUqV35kw0BSx9kGta8WzCKA8VCyriGNdpGNcg2+hx+bBgLdvjXuVFV4D3txxpvG857/OITH5NlX4+vBu8YaOoBJ0r9e7diAv6Kr0RxeMJNT9Zsbd0yLlmQ/M59+rwpxQeCDna+aY5wKRWFvLIY6JmNWO3et5XN1ipi2WmCgdMScptda8o4S9GimTWYbhbIUwUsvkGR357luKOnwhK9Tj794pKxUO7Hp76JE8RiSBl7y+treBf2Vvh89+AGWxXYshRffcM2wn6JgdGLUAHHw9OQoALFrI6gEpZtrE58A5J3IXNUzLB2+Ey+Yu7LaIpjyq+f3hFOUcOUSJ7ssMKybooJL1epUOWBYCKEck7QkOp/KPiSrKxY0cx8u/YUvf4uITULhjOlNtR3ORjP27F0umFgNE1KrzSV/OwvwtDmlPJwqRDzqllXo2TYj81lQ8BzjMu7XAk8Q=
   - ENCRYPTION_LABEL: dff9f3dc1b4c
   - COMMIT_AUTHOR_EMAIL: SkyZH@users.noreply.github.com
+  matrix:
+    - BUILD_TARGET=GITHUB_PAGES
+    - BUILD_TARGET=QINIU
 exclude:
 - vendor
 notifications:
