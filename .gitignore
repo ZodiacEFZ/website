@@ -1,4 +1,4 @@
-_site
+_site/
 .sass-cache
 .jekyll-metadata
 .asset-cache
@@ -54,3 +54,5 @@ build-iPhoneSimulator/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+Gemfile.lock

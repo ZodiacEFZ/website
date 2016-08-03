@@ -1,13 +1,19 @@
 language: ruby
 rvm:
-- 2.1
-
-script: ./script/cibuild
-
+- 2.2
+before_install:
+- sudo apt-get -qq update
+- sudo apt-get install -y envsubst
+script:
+- chmod +x ./_utils/ci_generate.sh
+- "./_utils/ci_generate.sh"
+- jekyll build
+- chmod +x ./_utils/ci_qiniu.sh
+- "./_utils/ci_qiniu.sh"
 env:
   global:
   - JEKYLL_ENV=production
-
-exclude: [vendor]
-
-sudo: false
+  - secure: FUGdgO4He66bk7lByolS93ZgI/F2oLQDo0uE1dAwdmwiaAwCaMUnu7kMSNq/tjQiJgY2GAqb1Z6mznuwYsLQYlnGbRS+y0E87L/4X/Wh0AlC6i9Hdh579/qLZ1kJXK14uL6iQioDdSRdoLMvsmnTEsZr2vsisLObtnun3lqyNAvLXSHRjggbox13104v3HObAYxTYkUu70Sbj6xunJg4PDfe1v8yPGrxMFmF2G5jusczVgDFE0/eXvxtWhM+RMHSdz/tItnGo0ywMmLYNjzb2gLuJ/JprdNFAWJrikWTD81QDre+rSGBA5Q9Jzbog1HjIjDKezJwPL6tZCYeorJnTVynogs4iGyxm3WTHRPtQckNleuVvo/+ucsim9RBC7nFhpo2TJwbar6326vFzPIIrc7mPed/Q/wu/lAyDTwuD5uZOyPGTE5tixnExj1DwHB3Ud3EvACZbA7wFmyvRU+XPaV3YksXxtCVFBm2wSUWYAll1zRD2YboQDb2uhrpP8nvoPSsKvTPL1WkHSgFErzYrOw/C22DfFlOSth0czXBVPgT7ar+4//LU/n3QiU909jUUTNfK5dciltGoL7J1ZTYXrHcTtth0jUj/XwU8KYpFsEOzNbvn+SAQnRcIP+ogAwHjQMikBsH2RFtuayBJqjAJMJmm0XZpj0289hOQI0Cukc=
+  - secure: tWazkiFekTho62KqayphDwoj8FIuKAD+i+e4O6yFw8llhkOXFFs6YTiMaFYjSfOO7isgkrWCGMrdagGZCqozkBgsUrQVThhiayj8/zr1lYJiNB4a+ZlY8j3Nvhp2wNu17uIdaCM65VQk7oJeafsgc7amqiv2irXxqcxzvoPiucza4bioVStO9hUnbpWyHc2UOuV9eodfqGxfoehnlsyDgZaPhtQUy3hLJ6L5VUqV35kw0BSx9kGta8WzCKA8VCyriGNdpGNcg2+hx+bBgLdvjXuVFV4D3txxpvG857/OITH5NlX4+vBu8YaOoBJ0r9e7diAv6Kr0RxeMJNT9Zsbd0yLlmQ/M59+rwpxQeCDna+aY5wKRWFvLIY6JmNWO3et5XN1ipi2WmCgdMScptda8o4S9GimTWYbhbIUwUsvkGR357luKOnwhK9Tj794pKxUO7Hp76JE8RiSBl7y+treBf2Vvh89+AGWxXYshRffcM2wn6JgdGLUAHHw9OQoALFrI6gEpZtrE58A5J3IXNUzLB2+Ey+Yu7LaIpjyq+f3hFOUcOUSJ7ssMKybooJL1epUOWBYCKEck7QkOp/KPiSrKxY0cx8u/YUvf4uITULhjOlNtR3ORjP27F0umFgNE1KrzSV/OwvwtDmlPJwqRDzqllXo2TYj81lQ8BzjMu7XAk8Q=
+exclude:
+- vendor
