@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.1
+
+script: ./script/cibuild
+
+env:
+  global:
+  - JEKYLL_ENV=production
+
+exclude: [vendor]
+
+sudo: false
