@@ -4,6 +4,8 @@ rvm:
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y gettext
+- gem update --system
+- gem --version
 - chmod +x ./_utils/ci_generate.sh
 - "./_utils/ci_generate.sh"
 
