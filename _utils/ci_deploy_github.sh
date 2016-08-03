@@ -13,13 +13,12 @@ function doCompile {
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
-    doCompile
     exit 0
 fi
 
 # Save some useful information
-REPO="git@github.com:frcefz/frcefz.github.io.git"
-SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+REPO="https://github.com/frcefz/frcefz.github.io.git"
+SSH_REPO="${REPO/https:\/\/github.com\//git@github.com:}"
 SHA=`git rev-parse --verify HEAD`
 
 # Clone the existing gh-pages for this repo into out/
