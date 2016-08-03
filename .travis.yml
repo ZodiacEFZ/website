@@ -8,7 +8,6 @@ before_install:
 - gem --version
 - chmod +x ./_utils/ci_generate.sh
 - "./_utils/ci_generate.sh"
-
 script:
 - jekyll build
 - chmod +x ./_utils/ci_qiniu.sh
@@ -23,4 +22,7 @@ env:
 exclude:
 - vendor
 notifications:
-  slack: efzrobotics:IdopU56AFMf8BbOTAKRiseLc
+  slack:
+    rooms:
+      - secure: l7IuBBQUmj5BsQWw01oZYjat2Vvl2YJMilFf814qR7UyzS5FSXdvv00W/aAuD1cozRtXWX/71zhPG48ADrXsDSd8LORefgxpq9V/rVDOMGb+v+IE6BcUZmuHBBrRNtlxP/T9UteGhh+mkKLS7r56Iy7RVbLvL3l+Ytn1h9fy13zIv03Ln4FzugZIeB40Tsi/+syBtwuObWcxszPHHk29yHco7UjAM2Wq8veMV1cpa/5VdVCyoPSop3bd3jsJ4Fl6qHwz2+4lRJBRjUGDzwQdoHZwqkxsqFYSmLMex+WYfhgVpe95ED7OsAchVwpmGvsR/yGp7is6we3LJabFw31FVfUCcUf6Z6z9n36DNqD8JjlQMgqDbcKNKkDseKnKqV2Nmc65+fwmYU2QkSOUhbUNlAG486EwuNKxw6UAL1ZKHnLCZZRjNo3gtk3Aq9jWGrDwfiE5d/qaCqpKFhIc9Eg3IxmEpn1NqsepKVC6e1nANT4fyaQzYsyRyBjEKPRumnZ0aPRMyH4ryINiLgY89OH8JqWRWYaJAdWpVXipgoQDWfElr5JK+n5q2QGy+LA02cm2/9xFBzEaIY8NtsROSgcT/+Xxaa2Mrjyuj0nAFKkiTYfh1KzohsPegF4Tnme73ZsJTtzUsDxv0x2t5HbCeOcaL/ppkPXTOmqXHbja+ntvoFc=
+      - secure: oTF/QHgMo0Fa1I2JLVny6CK1Ug47wosBnKoREmUinuLhhJWz60tiNLKdgi3hjJN7NKyaBOwQveyk2msGzY/4NQzhhC/1yJCTTUSOAtD9ccRdYmux6kXNtriuc/5NcTQJpUBKzMQQM+l1FHwTEEWJaTF2qh4xKPb635HFiDyxaRMY0DH8XaRrWP4ur0LzYYWyge+1ce46HlzdDXByOTrNlX7adYS9YZr35niZ93KuQXHfRrF1kGzcpYT6xzSvikRxRk6a57RZPpLOTK9luBIfyIDDpjbwBm8RaEDr1rPs+YSiB3o9pVMS11j83pPnqKUnvCCYPelNBe2K3RdeF8eI8LPG6n97HJyNHD3iXjVZ1cKNOqv9Gk2vcjjNd7IGnd5UssdEBRJIRGW4fBh8AfCqLGp9y9gL3iTCa8SHQqABs7Dni8YuxPEaV4BwEJ7AqT12lg9H1zQdAj4BCy1Bk+/1UFnBhWgJqT3zMmSVe25+ursRHDwKl04XeaEQVk/IXVksMYu0EG/aD2fwSJDGiuDYtH3/fg3NWLE//QpLuvwigwxXPwx7qx2It83272HD83cMPCY+bNm8WWe4Gte5mXpzbFVmQHGXT2p11TbAyhgjqBH2fcE3DOTYIM8x28HrsGhBxk7LNmqETKZv78e0e5fkT/nSQIkM/tLoGNSFE1AktUQ=
