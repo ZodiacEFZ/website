@@ -1,4 +1,4 @@
 #!/bin/bash
 cd "${0%/*}"
 
-qshell qupload sync.json
+./qshell qupload sync.json
