@@ -5,4 +5,5 @@ cd "${0%/*}"
 
 cp -a ../_icon/. ../_site/
 
-./qshell qupload sync.json
+./ci_deploy_qiniu.sh
+./ci_deploy_github.sh
