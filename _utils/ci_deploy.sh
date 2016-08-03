@@ -12,5 +12,9 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     exit 0
 fi
 
-./ci_deploy_qiniu.sh
-./ci_deploy_github.sh
+if [ "$BUILD_TARGET" = "GITHUB_PAGES" ]; then
+   ./ci_deploy_github.sh
+fi
+if [ "$BUILD_TARGET" = "QINIU" ]; then
+   ./ci_deploy_qiniu.sh
+fi
