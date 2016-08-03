@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 cd "${0%/*}"
 
 cp -a ../_icon/. ../_site/

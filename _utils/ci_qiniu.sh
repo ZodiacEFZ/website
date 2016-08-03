@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 cd "${0%/*}"
 
 wget http://devtools.qiniu.com/qshell-v1.8.0.zip
