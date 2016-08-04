@@ -10,7 +10,6 @@ before_install:
 - "./_utils/ci_generate.sh"
 script:
 - jekyll build
-- "./_utils/ci_qiniu.sh"
 - "./_utils/ci_deploy.sh"
 env:
   global:
