@@ -31,7 +31,7 @@ SkyZH 可以在 `Networktables` 中创建表格，并在表格中储存键值对
 
 ### 打开测试的 NetworkTable
 
-安装 FRC Update Suites 之后，你就可以在 `<用户目录>/wpilib/tools` 中找到应用程序。
+安装 WPIlib 插件之后，你就可以在 `<用户目录>/wpilib/tools` 中找到应用程序。
 
 {% img '{{ "networking-roborio/smartdashboard-1.png" }}' %}
 
