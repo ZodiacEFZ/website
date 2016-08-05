@@ -223,7 +223,7 @@ getNumber("tragetSpeed", 0);
 
 ### 打开 SmartDashboard
 
-安装 FRC Update Suites 之后，你就可以在 `<用户目录>/wpilib/tools` 中找到应用程序。
+安装 WPIlib 插件 之后，你就可以在 `<用户目录>/wpilib/tools` 中找到应用程序。
 
 {% img '{{ "networking-roborio/smartdashboard-1.png" }}' %}
 
