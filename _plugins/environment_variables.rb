@@ -6,6 +6,7 @@ module Jekyll
 
     def generate(site)
       site.config['env'] = ENV['JEKYLL_ENV'] || 'development'
+      site.config['build_target'] = ENV['BUILD_TARGET'] || 'QINIU'
       # Add other environment variables to `site.config` here...
     end
 

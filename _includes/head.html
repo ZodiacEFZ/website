@@ -8,10 +8,18 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="Keywords" Content="Zodiac, First Robotics, FRC, Team 9036">
-  <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//fonts.useso.com/css?family=Amiko:600|Oxygen" rel="stylesheet">
-  <link href="//cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css" rel="stylesheet">
+  {% if site.build_target == 'QINIU' %}
+    <link href="//fonts.useso.com/css?family=Amiko:600|Oxygen" rel="stylesheet">
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css" rel="stylesheet">
+  {% endif %}
+  {% if site.build_target == 'GITHUB_PAGES' %}
+    <link href="https://fonts.googleapis.com/css?family=Amiko:600|Oxygen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.css" rel="stylesheet">
+  {% endif %}
   {% css "main.css" %}
   {% css "syntax.css" %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
