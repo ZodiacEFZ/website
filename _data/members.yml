@@ -1,0 +1,52 @@
+data:
+  -
+    name: Clark (陈谦路)
+    position: "Captain"
+    intro: >
+      运动达人，昆虫控，喜欢捣鼓电子和机械。不过感觉只要是团队合作都很喜欢。<br>
+      I have a wide variety of hobbies which allows me to negotiate with different groups of the team quite easily.
+      Also my double personality, serious when working and silly when playing, helps me get along with my teammates well.
+    type: captain
+  -
+    name: GuoZL (郭子梁)
+    position: "Vice Captain"
+    intro: >
+      我渣渣，涉猎较广泛。爱膜蛤 +1，兼任小学生手工副队长助理。<br>
+      I have a broad mind, to an extend. In addition to help our group leader to do some team work,
+      I also do a lot of <em>interesting</em> handcrafts (for instance, the bumper and our wooden moat).
+    type: captain
+  -
+    name: SkyZH (迟遲)
+    position: "Leader of Programming<br>Web Engineer"
+    intro: >
+      不会写程序，补番大魔王，爱膜蛤。<br>
+      Experienced in software engineering.
+      Maintain several open source projects.
+      Focus on vision process.
+    type: leader
+
+  - name: Xinjia (新家正太)
+    position: Member of Electronic Team<br>Driver
+    intro: >
+      喜欢工科，inventor玩得还不错，课余喜欢踢球和赛车游戏。<br>
+      Good at robot controlling and CAD. Help the team figure out the way of building our robot.
+    type: member
+
+  - name: 闵天淏 16 男
+    position: Vice Captain
+    intro: >
+      MDZZ。<br>
+      Phylosophy。<br>
+      队里负责锯木头以及布艺，简单来说就是技工。
+      单机游戏，烧耳机。
+      羽毛球，过度热爱公路车导致牙齿疼痛。
+      在交响乐团吹大管。
+    type: captain
+
+  - name: David Wang (汪达玮)
+    position: Leader of Electricity
+    intro: >
+      Having no experienced skill, except strong ability to arrange wires, but learning fast.
+      Preferring to solving problems efficiently.
+      Believing that safety comes first, friendship comes second, competition comes the third.
+    type: leader

@@ -1,0 +1,32 @@
+---
+layout: default
+title:  "队员介绍 / Team Member"
+date:   2016-08-10 21:22:19 +0800
+categories: team
+tags: 队伍 介绍
+---
+<div class="container m-t-3">
+  <h1 class="display-4">Team Members</h1>
+  <div class="card-columns m-t-1">
+    {% for member in site.data.members.data %}
+      {% case member.type %}
+        {% when 'captain' %}
+           {% assign __class = 'card-outline-info' %}
+         {% when 'leader' %}
+            {% assign __class = 'card-outline-warning' %}
+        {% when 'teacher' %}
+           {% assign __class = 'card-outline-success' %}
+        {% else %}
+           {% assign __class = '' %}
+      {% endcase %}
+      <div class="card card-block {{ __class }} text-xs-center member-info">
+        <blockquote class="card-blockquote">
+          <h4>{{ member.name }}</h4>
+          <p>{{ member.intro }}</p>
+          <footer><em>{{ member.position }}</em></footer>
+        </blockquote>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>

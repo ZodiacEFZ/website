@@ -1,0 +1,43 @@
+---
+en:
+  home:
+    intro_zodiac: Zodiac is a new FRC team set up in May, 2016. Now there are more than 15 team members.
+    learn_more: Learn More
+    first_robotics_competition: First Robotics Competition
+    frc_intro: For Inspiration and Recognition of Science and Technology.
+    school_from: From
+    school_name: No.2 HS of ECNU
+    school_intro: Well known for its outstanding performance in international, continental, national and regional science contests.
+    school_website: Website
+    sponsors: Sponsors
+    sponsors_intro: Currently there are no sponsors. You may find them out later.
+    join_us: Hello, World
+    join_us_intro: If you want to join Zodiac, feel free to contact us.
+    join_us_slack: Chat on Slack
+    members: Members
+    our_robot: Out Robot
+    activities: Activites
+    lang:
+      en: English
+      zh: Chinese
+zh:
+  home:
+    intro_zodiac: Zodiac 在 2016 年 5 月刚刚建立。这个 FRC 机器人队伍已经有十多个名队员了。
+    learn_more: 了解更多
+    first_robotics_competition: FRC 机器人竞赛
+    frc_intro: 激发科技灵感。
+    school_from: 来自
+    school_name: 华东师大二附中
+    school_intro: 创建于 1958 年，长期坚持“以质量立校，以科研兴校，以改革创新发展学校”的办学理念。
+    school_website: 学校官网
+    sponsors: 赞助商
+    sponsors_intro: 还没有人赞助我们 QwQ。以后大概会有吧。
+    join_us: 加入我们
+    join_us_intro: 如果您有兴趣加入 Zodiac，欢迎联系我们！
+    join_us_slack: 在 Slack 上关注
+    members: 所有队员
+    our_robot: 我们的机器人
+    activities: 最近活动
+    lang:
+      en: 英文
+      zh: 中文
