@@ -86,7 +86,8 @@ layout: default-main
             <p class="lead">
               If you want to join Zodiac, feel free to contact us.
             </p>
-            <a class="btn btn-outline-warning btn-lg" href="https://efzrobotics.slack.com/x-65289711110-65876760241/signup" role="button">Chat on Slack <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+            <a class="btn btn-outline-warning btn-lg" href="https://efzrobotics.slack.com/x-65289711110-65876760241/signup" role="button">Chat on Slack <i class="fa fa-slack" aria-hidden="true"></i></a>
+            <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#wechatModal">Join on Wechat <i class="fa fa-weixin" aria-hidden="true"></i></i></a>
           </div>
           <div class="col-md-6">
             <div class="p-a-1">{% img '{{ "flag.png" }}' %}</div>
@@ -96,6 +97,21 @@ layout: default-main
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="ModalWechat" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-xs-center">
+      <div class="modal-body">
+        <h1>Join <em>Zodiac Fans</em></h2>
+        {% img 'wechat.svg' %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <nav class="navbar navbar-light navbar-fixed-bottom text-md-right text-xs-center hidden-sm-down" id="footer-index">
   <ul class="list-inline">
     <span class="hidden-sm-down">
