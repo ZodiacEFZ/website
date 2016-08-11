@@ -44,9 +44,15 @@ data:
     type: captain
 
   - name: David Wang (汪达玮)
-    position: Leader of Electricity
+    position: Leader of Electronic
     intro: >
       Having no experienced skill, except strong ability to arrange wires, but learning fast.
       Preferring to solving problems efficiently.
       Believing that safety comes first, friendship comes second, competition comes the third.
     type: leader
+
+  - name: 杨致远
+    position: Member of Electronic
+    intro: >
+      机械工，酷爱足球和机器人，善于切割板材，制作零件。喜欢工程。
+    type: member
