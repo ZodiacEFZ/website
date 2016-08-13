@@ -26,7 +26,7 @@ data:
     type: leader
 
   - name: Xinjia (新家正太)
-    position: Member of Electronic Team<br>Driver
+    position: Member of Electronical<br>Driver
     intro: >
       喜欢工科，inventor玩得还不错，课余喜欢踢球和赛车游戏。<br>
       Good at robot controlling and CAD. Help the team figure out the way of building our robot.
@@ -44,7 +44,7 @@ data:
     type: captain
 
   - name: David Wang (汪达玮)
-    position: Leader of Electronic
+    position: Leader of Electronical<br>Safety Captain
     intro: >
       Having no experienced skill, except strong ability to arrange wires, but learning fast.
       Preferring to solving problems efficiently.
@@ -52,7 +52,7 @@ data:
     type: leader
 
   - name: 杨致远
-    position: Member of Electronic
+    position: Member of Electronical
     intro: >
       机械工，酷爱足球和机器人，善于切割板材，制作零件。喜欢工程。
     type: member
