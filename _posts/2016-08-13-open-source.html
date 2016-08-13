@@ -1,0 +1,24 @@
+---
+layout: default
+title:  "开源项目 / Open Source Projects"
+date:   2016-08-10 21:42:45 +0800
+categories: team
+tags: 队伍 开源
+---
+
+<div class="container">
+  <h1 class="display-4">Open Source Projects <small>Stronghold 2016</small></h1>
+  <p>We are happy to anounce that all of our projects in Stronghold 2016 are open-sourced.
+  <div class="card-columns m-t-1">
+    {% for project in site.data.project.data %}
+      <div class="card card-block card-primary-info text-xs-center member-info">
+        <blockquote class="card-blockquote">
+          <h4>{{ project.name }}</h4>
+          <p>{{ project.intro }}</p>
+          <a class="btn btn-outline-primary" href="{{ project.link }}">Learn More</a>
+        </blockquote>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
