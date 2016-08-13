@@ -11,7 +11,7 @@ function doCompile {
 }
 
 # Save some useful information
-REPO="https://github.com/frcefz/frcefz.github.io.git"
+REPO="https://github.com/ZodiacEFZ/frcefz.github.io.git"
 SSH_REPO="${REPO/https:\/\/github.com\//git@github.com:}"
 SHA=`git rev-parse --verify HEAD`
 
