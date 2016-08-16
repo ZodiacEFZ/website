@@ -85,10 +85,9 @@ layout: default-main
               If you want to join Zodiac, feel free to contact us.
             </p>
             <a class="btn btn-outline-warning btn-lg" href="https://zodiacefz.slack.com/signup" role="button">Chat on Slack <i class="fa fa-slack" aria-hidden="true"></i></a>
-            <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#wechatModal">Join on Wechat <i class="fa fa-weixin" aria-hidden="true"></i></i></a>
             <hr class="m-y-3 m-x-1">
             <p class="lead">
-              We also provide guides including programming and building a website.
+              We also provide guides on programming and building a website.
             </p>
             <a class="btn btn-outline-warning btn-lg" href="{{ '/post.html' | prepend: site.baseurl }}" role="button">Resources <i class="fa fa-slack" aria-hidden="true"></i></a>
           </div>
@@ -101,25 +100,11 @@ layout: default-main
   </div>
 </div>
 
-<div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="ModalWechat" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content text-xs-center">
-      <div class="modal-body">
-        <h1>Join <em>Zodiac Fans</em></h1>
-        {% img 'wechat.svg' %}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <nav class="navbar navbar-light navbar-fixed-bottom text-md-right text-xs-center hidden-sm-down" id="footer-index">
   <ul class="list-inline">
     <span class="hidden-sm-down">
       {% include custom-footer.html %}
-      <span>  |  </span>
+      <span> | </span>
     </span>
     {% include nav-list.html %}
   </ul>
