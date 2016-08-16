@@ -88,7 +88,7 @@ SkyZH 有一个很奇怪的习惯。他凭感觉将扫地机器人开到任意�
                 while(milliseconds() - __timer <= 1 && button1.isHeld());
                 if(button1.isHeld()) {
                     servo.setAngle(0);
-                    while(milliseconds() - __timer <= 1 && button1.isHeld());
+                    while(milliseconds() - __timer <= 2 && button1.isHeld());
                 }
                 servo.setAngle(180);
             }
