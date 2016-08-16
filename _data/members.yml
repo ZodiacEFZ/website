@@ -56,3 +56,10 @@ data:
     intro: >
       机械工，酷爱足球和机器人，善于切割板材，制作零件。喜欢工程。
     type: member
+    
+  - name: Rocka Zhou (周亦哲)
+    position: Member of Programming
+    intro: >
+      新人一枚，喜爱工程，乐于编程，MC忠粉。 
+      Focus on robotics logic, and some other programming issues. Helpful in mechanic designing. Know how to use CAD.
+    type: member
