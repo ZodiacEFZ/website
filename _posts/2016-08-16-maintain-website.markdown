@@ -16,6 +16,7 @@ tags: 队伍 网站 维护
 4.  文件名设置为 `2016-08-04-first-day-training.markdown` (格式为 `日期-英文-名`)。
 
 5.  在开头复制文件头    
+    
      ```
      ---
      layout: post
