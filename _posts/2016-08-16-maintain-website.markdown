@@ -34,7 +34,7 @@ tags: 队伍 网站 维护
 
 8.  如果需要插入图片，请先把图片上传到 `_assets/img` 目录下。文件名不要出现中文字符。
 
-9.  在文章中引入图片，换行空行后直接插入代码 `{% img '{{ "programming-with-wpilib/create-project-1.png" }}' %}`。
+9.  在文章中引入图片，换行空行后直接插入代码 `&#123;&#37; img "programming-with-wpilib/create-project-1.png" &#37;&#125;`。
     这里 `programming-with-wpilib/create-project-1.png` 是图片相对于 img 目录的位置。注意图片无法直接在 GitHub 上预览。
 
 10.  点击 `Commit New File`。
