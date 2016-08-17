@@ -5,7 +5,7 @@ task :test do
     :disable_external => true,
     :allow_hash_href => true,
     :empty_alt_ignore => true,
-    :url_ignore => ["/#.*/"],
+    :url_ignore => [/#.*/],
     :parallel => { :in_processes => 2 }
   }).run
 end

@@ -11,7 +11,6 @@ before_install:
 script:
 - jekyll build
 - "./_utils/ci_prepare_deploy.sh"
-- rake test
 - "./_utils/ci_deploy.sh"
 env:
   global:
