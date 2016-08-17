@@ -6,10 +6,6 @@ cd "${0%/*}"
 SOURCE_BRANCH="master"
 TARGET_BRANCH="master"
 
-function doCompile {
-  ./ci_copy.sh
-}
-
 # Save some useful information
 REPO="https://github.com/ZodiacEFZ/zodiacefz.github.io.git"
 SSH_REPO="${REPO/https:\/\/github.com\//git@github.com:}"
@@ -26,7 +22,7 @@ cd ..
 rm -rf out/**/* || exit 0
 
 # Run our compile script
-doCompile
+./ci_copy.sh
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
