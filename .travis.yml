@@ -11,7 +11,7 @@ before_install:
 script:
 - jekyll build
 - "./_utils/ci_prepare_deploy.sh"
-- htmlproofer ./_site --disable-external
+- htmlproofer ./_site --disable-external --allow-hash-href true
 - "./_utils/ci_deploy.sh"
 env:
   global:

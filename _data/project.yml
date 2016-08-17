@@ -1,38 +1,38 @@
-data:
-  -
-    name: BreezeRobot
-    intro: >
-      Robot Program for Stronghold 2016
-    link: https://github.com/ZodiacEFZ/BreezeRobot
-  -
-    name: Vision MJPEG Proxy
-    intro: >
-      Proxy will set up a web server to serve WebDashboard static files and proxy
-      requests to vision camera server so as to make it possible for multiple
-      clients to gain access to vision camera at the same time.
-    link: https://github.com/ZodiacEFZ/stronghold-vision-mjpeg-proxy
-  -
-    name: Vision OpenCV
-    intro: >
-      Vision process with OpenCV by Zodiac.
-    link: https://github.com/ZodiacEFZ/stronghold-vision-opencv
-  -
-    name: Vision WebDashboard
-    intro: >
-      Vision dashboard for Zodiac.
-    link: https://github.com/ZodiacEFZ/stronghold-vision-webdashboard
-  -
-    name: Video Capture
-    intro: >
-      Capture video from an mjpg stream and extract them into image sequence.
-    link: https://github.com/ZodiacEFZ/stronghold-video-capture
-  -
-    name: Website
-    intro: >
-      Zodiac Website source code.
-    link: https://github.com/ZodiacEFZ/website
-  -
-    name: Vision Script
-    intro: >
-      Process Management with PM2 on Raspberry Pi to start vision process.
-    link: https://github.com/ZodiacEFZ/stronghold-vision-script
+---
+-
+  name: BreezeRobot
+  intro: >
+    Robot Program for Stronghold 2016
+  link: https://github.com/ZodiacEFZ/BreezeRobot
+-
+  name: Vision MJPEG Proxy
+  intro: >
+    Proxy will set up a web server to serve WebDashboard static files and proxy
+    requests to vision camera server so as to make it possible for multiple
+    clients to gain access to vision camera at the same time.
+  link: https://github.com/ZodiacEFZ/stronghold-vision-mjpeg-proxy
+-
+  name: Vision OpenCV
+  intro: >
+    Vision process with OpenCV by Zodiac.
+  link: https://github.com/ZodiacEFZ/stronghold-vision-opencv
+-
+  name: Vision WebDashboard
+  intro: >
+    Vision dashboard for Zodiac.
+  link: https://github.com/ZodiacEFZ/stronghold-vision-webdashboard
+-
+  name: Video Capture
+  intro: >
+    Capture video from an mjpg stream and extract them into image sequence.
+  link: https://github.com/ZodiacEFZ/stronghold-video-capture
+-
+  name: Website
+  intro: >
+    Zodiac Website source code.
+  link: https://github.com/ZodiacEFZ/website
+-
+  name: Vision Script
+  intro: >
+    Process Management with PM2 on Raspberry Pi to start vision process.
+  link: https://github.com/ZodiacEFZ/stronghold-vision-script

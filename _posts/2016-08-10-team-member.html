@@ -8,7 +8,7 @@ tags: 队伍 介绍
 <div class="container m-t-3">
   <h1 class="display-4">{{ page.title }}</h1>
   <div class="card-columns m-t-1">
-    {% for member in site.data.members.data %}
+    {% for member in site.data.members %}
       {% case member.type %}
         {% when 'captain' %}
            {% assign __class = 'card-outline-info' %}

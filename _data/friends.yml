@@ -1,7 +1,7 @@
-data:
-  -
-    name: 初檬
-    link: https://truemoe.cn/
-  -
-    name: Miss Daisy
-    link: http://www.team341.com/
+---
+-
+  name: 初檬
+  link: https://truemoe.cn/
+-
+  name: Miss Daisy
+  link: http://www.team341.com/
