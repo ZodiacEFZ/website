@@ -1,0 +1,11 @@
+---
+layout: page
+title:  "友情链接 / Friends"
+date:   2016-08-17 15:12:06 +0800
+categories: team
+tags: 队伍 链接
+---
+
+{% for friend in site.data.friends.data %}
+* {{ friend.name }} [{{ friend.link }}]({{ friend.link }})
+{% endfor %}

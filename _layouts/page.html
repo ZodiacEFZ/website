@@ -1,19 +1,30 @@
 ---
 layout: default
 ---
-<div class="container m-t-3">
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+        <header class="post-header">
+          <h1 class="post-title display-4" itemprop="name headline">{{ page.title }}</h1>
+          <p>
+            {% for tag in page.tags %}
+            <span class="label label-default">#{{ tag }}</span>
+            {% endfor %}
+          </p>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-      <article class="post">
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <header class="post-header">
-          <h1 class="post-title display-4">{{ page.title }}</h1>
-        </header>
-        
-        <div class="post-content">
+        <div class="post-content" itemprop="articleBody">
           {{ content }}
         </div>
-
       </article>
     </div>
   </div>

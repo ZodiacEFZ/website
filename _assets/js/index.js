@@ -30,7 +30,7 @@ $(document).ready(function() {
     controlArrows: false,
     verticalCentered: true,
     sectionsColor : ['#ccc', '#fff'],
-    responsiveWidth: 544,
-    responsiveHeight: 650,
+    responsiveWidth: 545,
+    responsiveHeight: 651,
   });
 });

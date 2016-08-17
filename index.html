@@ -68,9 +68,15 @@ layout: default-main
   <div class="section">
     <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-white">
       <div class="container">
-        <div class="col-md-6">
+        <div class="col-md-8">
           <h1 class="display-3">Sponsors</h1>
           <p>Currently there are no sponsors. You may find them out later.</p>
+        </div>
+        <hr class="m-y-3 m-x-1 hidden-md-up">
+        <div class="col-md-4">
+          <h1 class="display-3">Friends</h1>
+          {% include index/friends.html %}
+          <a class="btn btn-outline-warning btn-lg" href="{% post_url 2016-08-17-friends %}" role="button">Learn More <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -89,7 +95,7 @@ layout: default-main
             <p class="lead">
               We also provide guides on programming and building a website.
             </p>
-            <a class="btn btn-outline-warning btn-lg" href="{{ '/post.html' | prepend: site.baseurl }}" role="button">Resources <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+            <a class="btn btn-outline-warning btn-lg" href="{{ '/post.html' | prepend: site.baseurl }}" role="button">Posts <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
           </div>
           <div class="col-md-6">
             <div class="p-a-1">{% img '{{ "flag.png" }}' %}</div>
