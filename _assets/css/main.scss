@@ -15,7 +15,7 @@ $min_width: 544px;
   border-radius: 0;
   h1 {
     display: inline-block;
-    background-color: rgba(255,255,255,0.85);
+    background-color: #fff;
     padding: 1rem 2rem;
     margin-bottom: 1rem;
   }
@@ -166,8 +166,4 @@ html {
 
 .post-content {
   line-height: 1.7;
-}
-
-.member-info:hover {
-  
 }
