@@ -2,7 +2,6 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     menu: '#navbar-index',
     lockAnchors: false,
-    anchors:['intro', 'frc', 'hsefz', 'sponsor', 'contact'],
     navigation: true,
     navigationPosition: 'right',
     showActiveTooltip: false,
