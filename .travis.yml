@@ -10,6 +10,7 @@ before_install:
 - "./_utils/ci_generate.sh"
 script:
 - jekyll build
+- htmlproofer ./_site --disable-external
 - "./_utils/ci_deploy.sh"
 env:
   global:
