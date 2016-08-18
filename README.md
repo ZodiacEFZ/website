@@ -23,3 +23,8 @@ to `GitHub Pages,` and all libraries will be loaded from `CDNJS` and `Google Fon
 In a word, **we do not use any cloud server**. CDN provides faster speed and
 better defense against DDOS. Only static files are hosted.
 We use GitHub to collaborate and update our website.
+
+## Discuss
+
+We've enabled discuss on our site. In China mainland, you'll see a `duoshuo`
+plugin. Otherwise there'll be a `Disqus` plugin.
