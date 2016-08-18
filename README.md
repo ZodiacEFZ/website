@@ -28,3 +28,7 @@ We use GitHub to collaborate and update our website.
 
 We've enabled discuss on our site. In China mainland, you'll see a `duoshuo`
 plugin. Otherwise there'll be a `Disqus` plugin.
+
+## Avatar
+
+With Gravatar and V2EX's Gravatar CDN, we can put avatars on team members page.
