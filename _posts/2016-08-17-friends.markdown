@@ -7,5 +7,5 @@ tags: 队伍 链接
 ---
 
 {% for friend in site.data.friends %}
-* {{ friend.name }} [{{ friend.link }}]({{ friend.link }})
+* {{ friend.id }} / {{ friend.name }} [{{ friend.link }}]({{ friend.link }})
 {% endfor %}

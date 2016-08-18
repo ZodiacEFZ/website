@@ -1,6 +1,10 @@
 language: ruby
 rvm:
 - 2.2.2
+cache:
+  - bundler
+  directories:
+    - _utils/.qshell
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y gettext
