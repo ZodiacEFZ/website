@@ -32,4 +32,5 @@ $(document).ready(function() {
     responsiveWidth: 545,
     responsiveHeight: 651,
   });
+  $("#cover").hide();
 });
