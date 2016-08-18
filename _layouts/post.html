@@ -22,7 +22,6 @@ layout: default
   <div class="row">
     <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
         <div class="post-content" itemprop="articleBody">
           {{ content }}
         </div>
@@ -30,6 +29,7 @@ layout: default
           {{ site.title }} 的原创内容遵循 <a class="alert-link" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 协议</a>。您可以自由分享、演绎，但不可用于商业用途。转载时请保留链接和协议。
         </div>
       </article>
+      {% include discuss_wrapper.html %}
     </div>
   </div>
 </div>
