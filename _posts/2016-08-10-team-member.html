@@ -19,12 +19,27 @@ tags: 队伍 介绍
         {% else %}
            {% assign __class = '' %}
       {% endcase %}
-      <div class="card card-block {{ __class }} text-xs-center member-info">
-        <blockquote class="card-blockquote">
-          <h4>{{ member.name }}</h4>
-          <p>{{ member.intro }}</p>
-          <footer><em>{{ member.position }}</em></footer>
-        </blockquote>
+      <div class="card {{ __class }} text-xs-center member-info">
+        {% assign gravatar = member.gravatar %}
+        {% if site.build_target == 'QINIU' %}
+          {% assign gravatar = gravatar | prepend: "https://cdn.v2ex.com/gravatar/" %}
+        {% endif %}
+        {% if site.build_target == 'GITHUB_PAGES' %}
+          {% assign gravatar = gravatar | prepend: "https://www.gravatar.com/avatar/" %}
+        {% endif %}
+        {% if member.gravatar %}
+          <img class="card-img-top member-info-avatar" src="{{ gravatar }}">
+        {% endif %}
+        {% if member.avatar %}
+          {% img '{{ member.avatar }}' class:"card-img-top member-info-avatar" %}
+        {% endif %}
+        <div class="card-block">
+          <blockquote class="card-blockquote">
+            <h4>{{ member.name }}</h4>
+            <p>{{ member.intro }}</p>
+            <footer><em>{{ member.position }}</em></footer>
+          </blockquote>
+        </div>
       </div>
     {% endfor %}
 
