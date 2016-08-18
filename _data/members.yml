@@ -1,5 +1,12 @@
 ---
 -
+  name: Albert Chen (陈向东)
+  position: "Mentor"
+  intro: >
+    From Engineer Technology Department of No.2 High school of East China Normal University.
+    A Master Degree in Educational Technology of East China Normal University.
+  type: teacher
+-
   name: Clark (陈谦路)
   position: "Captain"
   intro: >
@@ -28,7 +35,7 @@
 - name: Xinjia (新家正太)
   position: Member of Electronical<br>Driver
   intro: >
-    喜欢工科，inventor玩得还不错，课余喜欢踢球和赛车游戏。<br>
+    喜欢工科，Inventor 玩得还不错，课余喜欢踢球和赛车游戏。<br>
     Good at robot controlling and CAD. Help the team figure out the way of building our robot.
   type: member
 
