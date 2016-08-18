@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.2.2
+- 2.3.0
 cache:
   bundler: true
 before_install:
@@ -11,6 +11,7 @@ before_install:
 script:
 - bundle exec jekyll build
 - "./_utils/ci_prepare_deploy.sh"
+after_success:
 - "./_utils/ci_deploy.sh"
 env:
   global:
@@ -22,8 +23,6 @@ env:
   matrix:
   - BUILD_TARGET=GITHUB_PAGES
   - BUILD_TARGET=QINIU
-exclude:
-- vendor
 notifications:
   slack:
     rooms:
