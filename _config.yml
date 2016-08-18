@@ -46,5 +46,7 @@ assets:
     - _assets/js
 
   digest: true
+
 exclude:
   - vendor
+  - README.md
