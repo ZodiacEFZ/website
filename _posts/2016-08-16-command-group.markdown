@@ -3,7 +3,7 @@ layout: post
 title:  "CommandGroup · 指令组"
 date:   2016-08-16 23:30:41 +0800
 categories: programming
-tags: zyz大哥哥的编程干货 机器人 Java
+tags: zyz的编程干货 机器人 Java 编程
 ---
 
 `ZYZ` 是来自 `Zodiac` 的巨神程序猿。作为一名 Xenial 星人，他有一个聪慧的大脑 INN。利用
@@ -19,7 +19,7 @@ INN，他可以 **按顺序** 或者 **同时** 完成一项或多项任务。
 
 右击项目 - `Add` - `CommandGroup` 输入名称即可创建一个指令组。
 
-```
+```java
 public class TestCommandGroup extends CommandGroup {
 
     public TestCommandGroup() {
@@ -45,7 +45,7 @@ public class TestCommandGroup extends CommandGroup {
 
 在 `CommandGroup` 的构造函数里插入你的代码：
 
-```
+```java
 public class INNCommandGroup extends CommandGroup {
 
     public INNCommandGroup() {
@@ -69,14 +69,14 @@ public class INNCommandGroup extends CommandGroup {
 
 ### Command7
 
-```
+```java
 addSequential(new Command5());
 addSequential(new Command6());
 ```
 
 ### CommandFinal
 
-```
+```java
 addSequential(new Command1());
 addSequential(new Command2());
 addParallel(new Command3());

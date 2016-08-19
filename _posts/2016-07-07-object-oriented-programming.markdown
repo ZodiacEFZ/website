@@ -3,7 +3,7 @@ layout: post
 title:  "漂亮和丑陋的 Xenial 星人 · Java 面向对象入门"
 date:   2016-07-07 19:15:22 +0800
 categories: programming
-tags: zc大哥哥的编程干货 机器人 Java
+tags: zc的编程干货 机器人 Java 编程
 ---
 
 Pisces000221 是一名 Xenial 星人。

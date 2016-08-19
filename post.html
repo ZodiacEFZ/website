@@ -2,20 +2,40 @@
 layout: page
 title: 段子 / Posts
 ---
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <span class="post-meta">
-        <span class="m-r-1">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <small>
-        {% for tag in post.tags %}
-          <span class="text-muted">#{{ tag }}</span>
-        {% endfor %}
-        </small>
-      </span>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-    </li>
-  {% endfor %}
-</ul>
+
+<div class="row">
+  <h1>分类 <small class="text-muted">Categories</small></h1>
+  <ul class="list-inline">
+    {% for category in site.categories %}
+      <li class="list-inline-item">
+        <span class="h2"><span class="tag tag-info">{{ category | first }}</span></span>
+      </li>
+    {% endfor %}
+  </ul>
+  <p>
+    {% for tag in site.tags %}
+      <span class="tag tag-warning">#{{ tag | first }}</span>
+    {% endfor %}
+  </p>
+</div>
+
+<div class="row m-t-3">
+  <h1>所有段子 <small class="text-muted">All Posts</small></h1>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">
+          <span class="m-r-1">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <small>
+          {% for tag in post.tags %}
+            <span class="text-muted">#{{ tag }}</span>
+          {% endfor %}
+          </small>
+        </span>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

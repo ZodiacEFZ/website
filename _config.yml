@@ -25,16 +25,12 @@ assets:
     css: true
     js: true
 
-  #
-
   autowrite: true
   cdn: http://frc.hsefz.org
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
   prefix: "/assets"
   digest: true
-
-  #
 
   sources:
     - _assets/css
