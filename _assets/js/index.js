@@ -29,7 +29,7 @@ $(document).ready(function() {
     controlArrows: false,
     verticalCentered: true,
     sectionsColor : ['#ccc', '#fff'],
-    responsiveWidth: 545,
+    responsiveWidth: 993,
     responsiveHeight: 651,
   });
   $("#cover").hide();
