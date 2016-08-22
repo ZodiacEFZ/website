@@ -5,3 +5,4 @@ gem "jekyll-sitemap"
 gem "mini_magick"
 gem "octopress-minify-html"
 gem 'html-proofer'
+gem 'redcarpet'

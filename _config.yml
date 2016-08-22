@@ -13,7 +13,7 @@ baseurl: ""
 url: "http://frc.hsefz.org"
 
 # Build settings
-markdown: kramdown
+markdown: CustomRedcarpetParser
 
 gems:
   - jekyll-assets
