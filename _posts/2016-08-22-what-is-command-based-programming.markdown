@@ -8,7 +8,7 @@ categories:
 tags: 机器人 Java 编程 翻译
 ---
 
-> 源文：[What is Command based programming](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599732-what-is-command-based-programming)
+> 原文：[What is Command based programming](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599732-what-is-command-based-programming)
 
 WPILib 支持一种叫“指令式编程”的编写机器人程序的方法。指令式编程是一种可以帮助我们更好地管理机器人工程代码的设计模式。机器人程序和一般的视窗程序不同的地方有：
 
