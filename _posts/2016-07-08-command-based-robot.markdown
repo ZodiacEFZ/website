@@ -14,61 +14,61 @@ SkyZH 要对自己的机器人开始升级啦！因为之前的程序只能扫�
 上次自动控制的代码是这个样子的：
 
 ```java
-    public void autonomous() {
-        myRobot.setSafetyEnabled(false);
-        while(true) {
-            myRobot.drive(1.0, 0);
-            Timer.delay(2);
-            myRobot.drive(0, 0);
-            servo.setAngle(0);
-            Timer.delay(2);
-            servo.setAngle(180);
-            Timer.delay(2);
-            myRobot.drive(-1.0, 0);
-            Timer.delay(2);
-            myRobot.drive(0, 0);
-            servo.setAngle(0);
-            Timer.delay(2);
-            servo.setAngle(180);
-            Timer.delay(2);
-        }
-
+public void autonomous() {
+    myRobot.setSafetyEnabled(false);
+    while(true) {
+        myRobot.drive(1.0, 0);
+        Timer.delay(2);
+        myRobot.drive(0, 0);
+        servo.setAngle(0);
+        Timer.delay(2);
+        servo.setAngle(180);
+        Timer.delay(2);
+        myRobot.drive(-1.0, 0);
+        Timer.delay(2);
+        myRobot.drive(0, 0);
+        servo.setAngle(0);
+        Timer.delay(2);
+        servo.setAngle(180);
+        Timer.delay(2);
     }
+
+}
 ```
 
 SkyZH 于是决定稍微修改一下程序。
 **（注意：以下几段代码中的部分函数，比如 `getSpeed` 和 `getDirection` 并不是官方 API 中的，这是胡编乱造的。 o(^▽^)o）**
 
 ```java
-    public void autonomous() {
-        myRobot.setSafetyEnabled(false);
-        while(true) {
-            myRobot.drive(joystick.getSpeed(), joystick.getDirection());
-            Timer.delay(0.02);
-        }
-
+public void autonomous() {
+    myRobot.setSafetyEnabled(false);
+    while(true) {
+        myRobot.drive(joystick.getSpeed(), joystick.getDirection());
+        Timer.delay(0.02);
     }
+
+}
 ```
 
 机器人要在按住手柄上的 `1` 键时停下，并开始扫地。
 
 ```java
-    public void autonomous() {
-        myRobot.setSafetyEnabled(false);
-        while(true) {
-            myRobot.drive(joystick.getSpeed(), joystick.getDirection());
-            if(button1.isHeld()) {
-                myRobot.drive(0, 0);
-                servo.setAngle(180);
-                Timer.delay(1);
-                servo.setAngle(0);
-                Timer.delay(1);
-                servo.setAngle(180);
-            }
-            Timer.delay(0.02);
+public void autonomous() {
+    myRobot.setSafetyEnabled(false);
+    while(true) {
+        myRobot.drive(joystick.getSpeed(), joystick.getDirection());
+        if(button1.isHeld()) {
+            myRobot.drive(0, 0);
+            servo.setAngle(180);
+            Timer.delay(1);
+            servo.setAngle(0);
+            Timer.delay(1);
+            servo.setAngle(180);
         }
-
+        Timer.delay(0.02);
     }
+
+}
 ```
 
 SkyZH 有一个很奇怪的习惯。他凭感觉将扫地机器人开到任意一个地方，按下扫地键后，他才会关注那里到底是什么。
@@ -77,24 +77,24 @@ SkyZH 有一个很奇怪的习惯。他凭感觉将扫地机器人开到任意�
 
 
 ```java
-    public void autonomous() {
-        myRobot.setSafetyEnabled(false);
-        while(true) {
-            myRobot.drive(joystick.getSpeed(), joystick.getDirection());
+public void autonomous() {
+    myRobot.setSafetyEnabled(false);
+    while(true) {
+        myRobot.drive(joystick.getSpeed(), joystick.getDirection());
+        if(button1.isHeld()) {
+            myRobot.drive(0, 0);
+            servo.setAngle(180);
+            int __timer = milliseconds();
+            while(milliseconds() - __timer <= 1 && button1.isHeld());
             if(button1.isHeld()) {
-                myRobot.drive(0, 0);
-                servo.setAngle(180);
-                int __timer = milliseconds();
-                while(milliseconds() - __timer <= 1 && button1.isHeld());
-                if(button1.isHeld()) {
-                    servo.setAngle(0);
-                    while(milliseconds() - __timer <= 2 && button1.isHeld());
-                }
-                servo.setAngle(180);
+                servo.setAngle(0);
+                while(milliseconds() - __timer <= 2 && button1.isHeld());
             }
-            Timer.delay(0.02);
+            servo.setAngle(180);
         }
+        Timer.delay(0.02);
     }
+}
 ```
 
 好麻烦啊！SkyZH 为了偷懒，决定采用指令式编程来解决这个问题。
