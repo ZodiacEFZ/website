@@ -29,8 +29,8 @@ tags: 机器人 Java 编程 翻译
 
 在文本框中给项目命名，然后选择 Command-Based Robot 单选框。
 
-## 在 Project Explorer 中浏览项目股价
+## 在 Project Explorer 中浏览项目骨架
 
 {% img creating-a-robot-project/4.png %}
 
-注意你现在可能选择的是其他项目。请选择一个目录下有 `commands` 和 `subsystems` 的项目。
+注意你当前浏览的可能是其他项目。请选择一个目录下有 `commands` 和 `subsystems` 的项目。
