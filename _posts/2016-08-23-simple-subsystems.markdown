@@ -8,7 +8,7 @@ categories:
 tags: 机器人 Java 编程 翻译
 ---
 
-> 原文：[Creating a robot project](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599733-creating-a-robot-project)
+> 原文：[Simple Subsystems](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599735-simple-subsystems)
 
 ## 创建子系统
 

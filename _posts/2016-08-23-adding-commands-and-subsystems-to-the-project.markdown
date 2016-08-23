@@ -49,4 +49,4 @@ tags: 机器人 Java 编程 翻译
 
 {% img adding-commands-and-subsystems-to-the-project/6.png %}
 
-我们可以在 `Commands` (C++) 或 `org.usfirst.frc.teamxxxx.robot.commands` (Java) 中查看所有新建的子系统。欲了解如何完善一个指令，请参见“创建简单的指令”这篇文章。
+我们可以在 `Commands` (C++) 或 `org.usfirst.frc.teamxxxx.robot.commands` (Java) 目录中查看所有新建的子系统。欲了解如何完善一个指令，请参见“创建简单的指令”这篇文章。
