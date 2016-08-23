@@ -21,7 +21,7 @@ tags: 机器人 Java 编程 翻译
 {% img creating-a-robot-project/2.png %}
 
 展开 WPILib Robot C++ Development / WPILib Robot Java Development 文件夹，选择合适的项目类型
-(Robot C++ Project 或 Robot Java Project)。你只能看到你安装过的项目类型。
+(Robot C++ Project 或 Robot Java Project)。这里只能看到安装过的项目类型。
 
 ## 选择项目骨架
 
@@ -33,4 +33,4 @@ tags: 机器人 Java 编程 翻译
 
 {% img creating-a-robot-project/4.png %}
 
-注意你当前浏览的可能是其他项目。请选择一个目录下有 `commands` 和 `subsystems` 的项目。
+注意当前浏览的可能是其他项目。请选择一个目录下有 `commands` 和 `subsystems` 的项目。
