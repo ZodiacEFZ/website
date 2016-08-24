@@ -3,6 +3,8 @@ rvm:
 - 2.3.0
 cache:
   bundler: true
+  directories:
+  - .asset-cache
 before_install:
 - gem update --system
 - gem --version
