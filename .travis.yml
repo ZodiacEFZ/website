@@ -23,8 +23,8 @@ env:
   - ENCRYPTION_LABEL=dff9f3dc1b4c
   - COMMIT_AUTHOR_EMAIL=SkyZH@users.noreply.github.com
   matrix:
-  - BUILD_TARGET=GITHUB_PAGES
   - BUILD_TARGET=QINIU
+  - BUILD_TARGET=GITHUB_PAGES
 notifications:
   slack:
     rooms:
