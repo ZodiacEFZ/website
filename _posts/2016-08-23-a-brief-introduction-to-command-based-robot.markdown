@@ -1,6 +1,6 @@
 ---		
 layout: post		
-title:  入门指令式机器人编程
+title:  指令式机器人编程
 date:   2016-08-23 12:00:36 +0800		
 categories:
 - showcase
