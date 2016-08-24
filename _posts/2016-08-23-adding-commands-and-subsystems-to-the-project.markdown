@@ -3,9 +3,9 @@ layout: post
 title:  "向机器人项目中添加指令和子系统"
 date:   2016-08-23 11:24:19 +0800		
 categories:
-- command-based programming
 - programming
-tags: 机器人 Java 编程 翻译
+tags: 机器人 Java C++ 编程 翻译
+showcase: translation-command-based
 ---
 
 > 原文：[Adding Commands and Subsystems to the project](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599734-adding-commands-and-subsystems-to-the-project)

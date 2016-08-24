@@ -3,9 +3,9 @@ layout: post
 title:  "创建机器人项目"		
 date:   2016-08-23 11:14:44 +0800		
 categories:
-- command-based programming
 - programming
-tags: 机器人 Java 编程 翻译
+tags: 机器人 Java C++ 编程 翻译
+showcase: translation-command-based
 ---
 
 > 原文：[Creating a robot project](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599733-creating-a-robot-project)

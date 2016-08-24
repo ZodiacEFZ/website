@@ -4,6 +4,7 @@ title:  "CommandGroup · 指令组"
 date:   2016-08-16 23:30:41 +0800
 categories: programming
 tags: zyz的编程干货 机器人 Java 编程
+showcase: programming-guide
 ---
 
 `ZYZ` 是来自 `Zodiac` 的巨神程序猿。作为一名 Xenial 星人，他有一个聪慧的大脑 INN。利用

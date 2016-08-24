@@ -4,6 +4,7 @@ title:  "Xenial 的代码仓库 · 使用 git"
 date:   2016-07-08 17:08:16 +0800
 categories: programming
 tags: zc的编程干货 机器人 Java 编程
+showcase: programming-guide
 ---
 
 很久以前，在 Xenial 星球上，人们都使用 XBrick 编写代码。一个名为 WindHub 软件公司迅猛发展，

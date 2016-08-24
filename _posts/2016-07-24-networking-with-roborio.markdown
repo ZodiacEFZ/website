@@ -4,6 +4,7 @@ title:  "和 Xenial 情感交流"
 date:   2016-07-24 13:29:02 +0800
 categories: programming
 tags: zc的编程干货 机器人 Java 编程
+showcase: programming-guide
 ---
 
 ## 那些年，那个扫地机器人

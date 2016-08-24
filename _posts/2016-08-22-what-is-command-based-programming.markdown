@@ -3,9 +3,9 @@ layout: post
 title:  "什么是指令式编程"		
 date:   2016-08-22 18:13:22 +0800		
 categories:
-- command-based programming
 - programming
-tags: 机器人 Java 编程 翻译
+tags: 机器人 Java C++ 编程 翻译
+showcase: translation-command-based
 ---
 
 > 原文：[What is Command based programming](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599732-what-is-command-based-programming)
