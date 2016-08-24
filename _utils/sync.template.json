@@ -15,6 +15,5 @@
    "skip_suffixes"      :   ".DS_Store,.exe",
    "rescan_local"       :   true,
    "log_file"           :   "upload.log",
-   "log_level"          :   "info",
-   "up_host"            :   "http://up.qiniug.com"
+   "log_level"          :   "info"
 }
