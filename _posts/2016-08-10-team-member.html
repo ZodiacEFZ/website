@@ -9,17 +9,9 @@ tags: 队伍 介绍
   <h1 class="display-4">{{ page.title }}</h1>
   <div class="card-columns m-t-3">
     {% for member in site.data.members %}
-      {% case member.type %}
-        {% when 'captain' %}
-           {% assign __class = 'card-outline-info' %}
-         {% when 'leader' %}
-            {% assign __class = 'card-outline-warning' %}
-        {% when 'teacher' %}
-           {% assign __class = 'card-outline-success' %}
-        {% else %}
-           {% assign __class = '' %}
-      {% endcase %}
-      <div class="card {{ __class }} text-xs-center member-info">
+      <div class="card
+        {% case member.type %}{% when 'captain' %}card-outline-info{% when 'leader' %}card-outline-warning{% when 'teacher' %}card-outline-success{% else %} {% endcase %}
+        text-xs-center member-info">
         {% assign gravatar = member.gravatar %}
         {% if site.build_target == 'QINIU' %}
           {% assign gravatar = gravatar | prepend: "https://cdn.v2ex.com/gravatar/" %}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.post-content {
+  p:not(.card-text) {
+    line-height: 1.7;
+    font-size: 18px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  pre {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+  }
+}
+
+.post-header {
+  ul {
+    margin: 0 !important;
+  }
+}
+
+.discuss-wrapper {
+  max-width: 100%;
+}

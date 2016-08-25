@@ -19,6 +19,7 @@ gems:
   - jekyll-assets
   - jekyll-sitemap
   - octopress-minify-html
+  - bootstrap
 
 assets:
   compress:

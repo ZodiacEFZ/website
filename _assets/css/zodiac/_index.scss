@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+@import "custom_bootstrap";
+
+.jumbotron-title {
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
+.jumbotron-bg-white {
+  background-color: transparent;
+}
+
+.jumbotron-bg-pic {
+  h1 {
+    display: inline-block;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    color: #fff;
+  }
+  .lead {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
+  }
+  background-color: transparent;
+}
+
+.jumbotron-cover {
+  img {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  @include media-breakpoint-down(xs) {
+    h1.display-3 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+.container-vertical-align {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.frc-index-pic-0 {
+  background-image: url(asset_path("mask.png")), url(asset_path("26c128bcd4d83716.jpg"));
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: top center;
+}
+
+.frc-index-pic-1 {
+  background-image: url(asset_path("mask.png")), url(asset_path("36684c992737d145.jpg"));
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: top center;
+}
+
+.frc-index-pic-2 {
+  background-image: url(asset_path("5d9a62d92cd6a7cd.jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+#navbar-index {
+  a {
+    color: rgba(0,0,0,0.8);
+    display: inline-block;
+    transition: padding 0.3s ease-out, background-color 0.5s ease-out;
+    &.active {
+      background-color: rgba(240,173,78,0.8);
+      padding-left: 2rem;
+      padding-right: 2rem;
+      color: #fff;
+    }
+    background-color: transparent;
+    border-radius: 2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+.navbar-index {
+  background-color: rgba(255,255,255,0.5);
+  padding: 1rem 1rem;
+}
+
+#footer-index {
+  ul {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 1rem;
+  }
+  a {
+    color: #f0ad4e;
+  }
+}
+
+.fullpage-index {
+  .fp-controlArrow {
+    &.fp-prev {
+      border-color: transparent #0275d8 transparent transparent !important;
+    }
+    &.fp-next {
+      border-color: transparent transparent transparent #0275d8 !important;
+    }
+  }
+}
+
+#cover {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index:9999;
+}
