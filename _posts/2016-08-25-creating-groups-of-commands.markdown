@@ -33,7 +33,7 @@ PlaceSoda::PlaceSoda()
 // Java Code
 public class PlaceSoda extends CommandGroup {
 
-    public  PlaceSoda() {
+    public PlaceSoda() {
     	addSequential(new SetElevatorSetpoint(Elevator.TABLE_HEIGHT));
     	addSequential(new SetWristSetpoint(Wrist.PICKUP));
     	addSequential(new OpenClaw());
@@ -43,9 +43,9 @@ public class PlaceSoda extends CommandGroup {
 
 这是一个把易拉罐放在桌子上的例子。完成这个行为，需要：
 
-    1. 机器人升降装置提升到桌面高度以上
-    2. 机械手腕角度设置到合适位置
-    3. 张开机械爪
+1. 机器人升降装置提升到桌面高度以上
+2. 机械手腕角度设置到合适位置
+3. 张开机械爪
 
 这些动作都要一个接一个执行以保证易拉罐不会掉下来。 `addSequential()` 方法将一个指令（或指令组）作为传参，在这个指令组执行时，这些指令就会一个接一个执行。
 
@@ -69,7 +69,7 @@ PrepareToGrab::PrepareToGrab()
 
 public class PrepareToGrab extends CommandGroup {
 
-    public  PrepareToGrab() {
+    public PrepareToGrab() {
     	addParallel(new SetWristSetpoint(Wrist.PICKUP));
     	addParallel(new SetElevatorSetpoint(Elevator.BOTTOM));
     	addParallel(new OpenClaw());
@@ -79,9 +79,9 @@ public class PrepareToGrab extends CommandGroup {
 
 为了让程序效率更高，我们经常需要把几个指令同时执行。在这个例子里，机器人要准备抓取一个易拉罐。因为机器人当前什么也没有抓住，所以所有的关节都可以同时移动而不需要像上面那个例子一样考虑易拉罐掉下来。所有的指令都并行执行，因此所有的马达都在同时运作，并且每个指令都在 `isFinished()` 返回真的时候结束。指令可以已任何顺序排列，步骤是：
 
-    1. 机械手腕角度设置到合适角度
-    2. 机器人升降装置提升到合适位置
-    3. 张开机械爪
+1. 机械手腕角度设置到合适角度
+2. 机器人升降装置提升到合适位置
+3. 张开机械爪
 
 ## 混合使用并行和顺序指令
 
@@ -103,7 +103,7 @@ Grab::Grab()
 
 public class Grab extends CommandGroup {
 
-    public  Grab() {
+    public Grab() {
     	addSequential(new CloseClaw());
     	addParallel(new SetElevatorSetpoint(Elevator.STOW));
     	addSequential(new SetWristSetpoint(Wrist.STOW));
@@ -113,6 +113,6 @@ public class Grab extends CommandGroup {
 
 有时一些指令需要在其他指令完成之后才能执行。在这个例子里，易拉罐被抓紧了，之后升降装置和机械手腕才可以移动到存放位置。在这个例子里，机械手腕和升降装置必须等到易拉罐被抓住以后才能移动，但这两个操作是可以同时执行的。因此：
 
-    1. 关闭机械爪，其他指令等待
-    2. 升降装置移动
-    3. 与此同时机械手腕移动
+1. 关闭机械爪，其他指令等待
+2. 升降装置移动
+3. 与此同时机械手腕移动
