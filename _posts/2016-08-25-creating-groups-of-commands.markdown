@@ -8,6 +8,8 @@ tags: 机器人 Java C++ 编程 翻译
 showcase: translation-command-based
 ---
 
+> 原文：[Creating groups of commands](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599738-creating-groups-of-commands)
+
 我们所创建的操纵机器人机械的指令，可以被组合在一起完成更复杂的行为。这种组合指令的方式非常简单，我们接下来将介绍它。
 
 ---
@@ -114,4 +116,3 @@ public class Grab extends CommandGroup {
     1. 关闭机械爪，其他指令等待
     2. 升降装置移动
     3. 与此同时机械手腕移动
-    
