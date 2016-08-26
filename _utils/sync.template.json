@@ -7,7 +7,7 @@
    "key_prefix"         :   "",
    "overwrite"          :   true,
    "check_exists"       :   true,
-   "check_hash"         :   false,
+   "check_hash"         :   true,
    "check_size"         :   true,
    "skip_file_prefixes" :   ".git",
    "skip_path_prefixes" :   ".git",
