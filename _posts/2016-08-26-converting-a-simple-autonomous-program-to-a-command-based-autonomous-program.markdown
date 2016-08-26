@@ -236,7 +236,7 @@ public class SpinUpShooter extends Command {
 
 Shoot::Shoot()
 {
-     Requires(Robot.shooter);
+     Requires(Robot::shooter);
 }
 
 void Shoot::Initialize()
