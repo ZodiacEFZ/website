@@ -38,7 +38,9 @@ public class TestCommandGroup extends CommandGroup {
 `addParallel(Command command)`。
 
 其中, `addSequential` 是顺序执行一个指令(串联)，而 `addParallel`
-则是使该指令和上一指令同时进行(并行)，并在所有并列的指令都执行完成后再执行剩下的指令。
+则是使该指令在上一个顺序指令完成后执行，并使得之后的并行和第一个顺序指令和这个指令同时开始执行(并行)。
+
+因此，使用 `addSequential` 添加的指令不会等待之前所有的并行指令完成后开始，而是仅仅等待上一个顺序指令。
 
 我们再回到之前的 Command-based Robot 中，探索如何运行 INN 器官。
 
@@ -51,15 +53,15 @@ public class INNCommandGroup extends CommandGroup {
 
     public INNCommandGroup() {
         addSequential(new Command1());
-        addSequential(new Command2());
-        addParallel(new Command3());
+        addParallel(new Command2());
+        addSequential(new Command3());
         addSequential(new Command4());
     }
 }
 ```
 
 此时, `Command1` 先执行，接着 `Command2` 与 `Command3` 同时执行，
-最后在两者都执行完成后才开始执行 `Command4`。
+`Command3` 执行完成后开始执行 `Command4`。
 
 *注：如果需要达到并联串联同时使用的效果，可以将一部分指令放在一个 CommandGroup 里，再将这个 CommandGroup 加到其他的 CommandGroup 里。*
 
@@ -79,9 +81,9 @@ addSequential(new Command6());
 
 ```java
 addSequential(new Command1());
-addSequential(new Command2());
+addParallel(new Command2());
 addParallel(new Command3());
-addParallel(new Command7());      // Command7 是一个 CommandGroup
+addSequential(new Command7());      // Command7 是一个 CommandGroup
 addSequential(new Command6());
 ```
 
@@ -92,3 +94,5 @@ addSequential(new Command6());
 `CommandGroup` 继承了 `Command` 类，已经帮你写好了这些函数，帮助你管理所有指令。因此你不需要再重载这些函数。
 
 *感谢 Rocka Zhou 供稿*
+
+*修复了 CommandGroup 并行的一些问题*
