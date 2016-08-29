@@ -6,6 +6,15 @@ categories: team
 tags: 队伍 链接
 ---
 
+<div class="row text-xs-center">
+  {% for sponsor in site.data.sponsors %}
+  <div class="col-md-3">
+    {% img "sponsors/{{ sponsor.img }}" class:frc-sponsor-img alt:"{{sponsor.name}}" %}
+    <h4 href="sponsor.link">{{ sponsor.name }}</h4>
+  </div>
+  {% endfor %}
+</div>
+
 {% for friend in site.data.friends %}
 * {{ friend.id }} / {{ friend.name }} [{{ friend.link }}]({{ friend.link }})
 {% endfor %}
