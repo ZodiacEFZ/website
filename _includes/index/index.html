@@ -62,23 +62,32 @@
     </div>
   </div>
   <div data-anchor="sponsor" class="section">
-    <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-white">
-      <div class="container">
-        <h1 class="display-3">{{ i18n.sponsors }} &amp; {{ i18n.friends }}</h1>
-        <p class="lead">{{ i18n.sponsors_intro }}</p>
-        <div class="row text-xs-center m-y-2">
-          {% for sponsor in site.data.sponsors %}
-            <div class="col-xs-2">
-              {% img "sponsors/{{ sponsor.img }}" class:frc-sponsor-img alt:"{{sponsor.name}}" %}
-              <h4>{{ sponsor.name }}</h4>
-            </div>
-          {% endfor %}
-          <div class="col-xs-12 col-md-3">
-            <h4>Teams</h4>
-            <p class="lead">{% include index/friends.html %}</p>
+    <div class="slide" data-anchor="sponsors">
+      <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-white">
+        <div class="container">
+          <h1 class="display-3">{{ i18n.sponsors }}</h1>
+          <p class="lead">{{ i18n.sponsors_intro }}</p>
+          <div class="row text-xs-center m-y-2">
+            {% for sponsor in site.data.sponsors %}
+              <div class="col-xs-3 col-md-2">
+                {% img "sponsors/{{ sponsor.img }}" class:frc-sponsor-img alt:"{{sponsor.name}}" %}
+                <h4>{{ sponsor.name }}</h4>
+              </div>
+            {% endfor %}
           </div>
+          <a class="btn btn-outline-warning btn-lg m-b-1" href="#sponsor/teams" role="button">{{ i18n.friends }} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+          <a class="btn btn-outline-warning btn-lg m-b-1" href="{% post_url 2016-08-17-friends %}" role="button">{{ i18n.learn_more }} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
         </div>
-        <a class="btn btn-outline-warning btn-lg" href="{% post_url 2016-08-17-friends %}" role="button">{{ i18n.learn_more }} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="slide" data-anchor="teams">
+      <div class="jumbotron jumbotron-fluid jumbotron-cover jumbotron-bg-white">
+        <div class="container">
+          <h1 class="display-3">{{ i18n.friends }}</h1>
+          <p class="lead">{% include index/friends.html %}</p>
+          <a class="btn btn-outline-warning btn-lg m-b-1" href="#sponsor/sponsors" role="button">{{ i18n.sponsors }} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+          <a class="btn btn-outline-warning btn-lg m-b-1" href="{% post_url 2016-08-17-friends %}" role="button">{{ i18n.learn_more }} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
       </div>
     </div>
   </div>

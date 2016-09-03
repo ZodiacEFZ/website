@@ -3,6 +3,7 @@
   id: 341
   name: Miss Daisy
   link: http://www.team341.com/
+  description: 341 mentored us in China Robotics Challenge 2016 and Robotics Maker Workshop 2016.
 -
   id: 1595
   name: The Dragons
@@ -11,10 +12,12 @@
   id: 4001
   name: Rams Robotics
   link: http://www.team4001.com/
+  description: As a mentor, Gary continuously supports our team in various ways.
 -
   id: 5515
   name: Blue Power Robotics
   link: http://www.team5515.com/
+  description: Inspire us with First Robotics Challenge.
 -
   id: 9046
   name: 初檬

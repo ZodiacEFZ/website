@@ -1,20 +1,26 @@
 ---
 layout: page
-title:  "友情链接 / Friends"
+title:  "赞助 / Sponsors"
 date:   2016-08-17 15:12:06 +0800
 categories: team
 tags: 队伍 链接
 ---
 
+## Sponsors
+
 <div class="row text-xs-center">
   {% for sponsor in site.data.sponsors %}
-  <div class="col-md-3">
+  <div class="col-md-4">
     {% img "sponsors/{{ sponsor.img }}" class:frc-sponsor-img alt:"{{sponsor.name}}" %}
     <h4 href="sponsor.link">{{ sponsor.name }}</h4>
+    <small class="text-muted">{{ sponsor.description }}</small>
   </div>
   {% endfor %}
 </div>
 
+## Teams
+
 {% for friend in site.data.friends %}
-* {{ friend.id }} / {{ friend.name }} [{{ friend.link }}]({{ friend.link }})
+* [{{ friend.id }} / {{ friend.name }}]({{ friend.link }})    
+    {{ friend.description }}
 {% endfor %}
