@@ -24,14 +24,15 @@
   type: captain
 -
   name: SkyZH (迟遲)
-  position: "Leader of Programming<br>Web Engineer"
+  position: "Youth Mentor of Programming<br>Web Engineer"
   intro: >
     不会写程序，补番大魔王，爱膜蛤。<br>
     Experienced in software engineering.
     Maintaining several open source projects.
     Focusing on vision process.
-  type: leader
+  type: mentor
   gravatar: ad76ed99d69b9b3a9a7a25ca92d933ea.jpg?s=512
+
 
 - name: Xinjia (新家正太)
   position: Member of Electronical<br>Driver
@@ -50,6 +51,7 @@
     羽毛球，过度热爱公路车导致牙齿疼痛。
     在交响乐团吹大管。
   type: captain
+  gravatar: 5f0d1430c1c169873e171c1c76fe50fd?s=512
 
 - name: David Wang (汪达玮)
   position: Leader of Electronical<br>Safety Captain
