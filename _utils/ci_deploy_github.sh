@@ -36,8 +36,8 @@ ssh-add deploy_key
 
 # Now let's go have some fun with the cloned repo
 cd out
-git config user.name "SkyZH"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
+git config user.name "SkyZH@ZodiacBot"
+git config user.email "bot@withzodiac.com"
 
 echo "frc.hsefz.org" > CNAME
 
