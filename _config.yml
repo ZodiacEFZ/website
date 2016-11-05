@@ -8,9 +8,9 @@
 # Site settings
 title: Team 6353 | Zodiac
 email:
-description: Team 6353 Zodiac is an FRC Team set up in May, 2016.
+description: Team 6353 Zodiac is a FIRST Robotics Competition Team.
 baseurl: ""
-url: "http://frc.hsefz.org"
+url: "http://www.team6353.com"
 
 # Build settings
 markdown: CustomRedcarpetParser
@@ -27,7 +27,7 @@ assets:
     js: true
 
   autowrite: true
-  cdn: http://frc.hsefz.org
+  cdn: http://www.team6353.com
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
   prefix: "/assets"
