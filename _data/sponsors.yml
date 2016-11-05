@@ -1,8 +1,4 @@
 ---
-- name: PTC
-  img: PTC.png
-  link: http://www.ptc.com/
-  description: Applying in progress...
 - name: GitHub
   img: GitHub.png
   link: https://github.com/
