@@ -39,8 +39,6 @@ cd out
 git config user.name "SkyZH@ZodiacBot"
 git config user.email "bot@withzodiac.com"
 
-echo "frc.hsefz.org" > CNAME
-
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add --all
