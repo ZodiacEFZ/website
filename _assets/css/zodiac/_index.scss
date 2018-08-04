@@ -45,21 +45,21 @@
 }
 
 .frc-index-pic-0 {
-  background-image: url(asset_path("mask.png")), url(asset_path("26c128bcd4d83716.jpg"));
+  background-image: asset_url("mask.png"), asset_url("26c128bcd4d83716.jpg");
   background-repeat: repeat, no-repeat;
   background-size: cover, cover;
   background-position: bottom center;
 }
 
 .frc-index-pic-1 {
-  background-image: url(asset_path("mask.png")), url(asset_path("36684c992737d144.jpg"));
+  background-image: asset_url("mask.png"), asset_url("36684c992737d144.jpg");
   background-repeat: repeat, no-repeat;
   background-size: cover, cover;
   background-position: center center;
 }
 
 .frc-index-pic-2 {
-  background-image: url(asset_path("5d9a62d92cd6a7cd.jpg"));
+  background-image: asset_url("5d9a62d92cd6a7cd.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
