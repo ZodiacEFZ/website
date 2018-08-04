@@ -1,7 +1,5 @@
 {
    "src_dir"            :   "../_site",
-   "access_key"         :   "$QINIU_ACCESSKEY",
-   "secret_key"         :   "$QINIU_SECRETKEY",
    "bucket"             :   "frc-hsefz",
    "ignore_dir"         :   false,
    "key_prefix"         :   "",
