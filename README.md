@@ -1,6 +1,6 @@
 # website
 
-[![Build Status](https://travis-ci.org/ZodiacEFZ/website.svg?branch=master)](https://travis-ci.org/ZodiacEFZ/website) [![Dependency Status](https://gemnasium.com/badges/github.com/ZodiacEFZ/website.svg)](https://gemnasium.com/github.com/ZodiacEFZ/website)
+[![Build Status](https://travis-ci.org/ZodiacEFZ/website.svg?branch=master)](https://travis-ci.org/ZodiacEFZ/website) 
 
 This is the website project for Zodiac.
 
