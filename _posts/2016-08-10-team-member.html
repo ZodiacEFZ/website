@@ -10,7 +10,7 @@ tags: 队伍 介绍
   <div class="card-columns m-t-3">
     {% for member in site.data.members %}
       <div class="card
-        {% case member.type %}{% when 'captain' %}card-outline-info{% when 'leader' %}card-outline-warning{% when 'teacher' %}card-outline-success{% else %} {% endcase %}
+        {% case member.type %}{% when 'captain' %}card-outline-info{% when 'leader' %}card-outline-success{% when 'teacher' %}card-outline-success{% else %} {% endcase %}
         text-xs-center member-info">
         {% assign gravatar = member.gravatar %}
         {% if site.build_target == 'QINIU' %}

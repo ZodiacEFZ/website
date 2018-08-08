@@ -1,7 +1,7 @@
 ---
 en:
   home:
-    intro_zodiac: Zodiac is a new FRC team set up in May, 2016. Now there are more than 30 team members.
+    intro_zodiac: Founded in May 2016
     learn_more: Learn More
     at_a_glance: At a glance
     first_robotics_competition: First Robotics Competition
@@ -11,22 +11,29 @@ en:
     school_intro: Well known for its outstanding performance in international, continental, national and regional science contests.
     school_website: Website
     sponsors: Sponsors
-    sponsors_intro: We are so thankful to those who support us.
+    sponsors_intro: Deep Gratitude for our sponsors
     friends: Friends
-    join_us: Hello, World
+    join_us: Contact us
     join_us_intro: If you want to join Zodiac, feel free to contact us.
     join_us_slack: Chat on Slack
-    posts_intro: We also provide guides on programming and building a website.
-    posts: Posts
+    posts_intro: We provide guides on programming and building a website.
+    posts: All Posts
     members: Members
     our_robot: Out Robot
     activities: Activites
     lang: 中文
     lang_url: /index_zh.html
-
+    zodiac:
+      frc: FRC
+      dev: Team Development
+      resource: Resources
+      club: Club Activities
+    contact:
+      email: Team Email
+      wechat: Subscribe on Wechat
 zh:
   home:
-    intro_zodiac: Zodiac 在 2016 年 5 月刚刚建立。这个 FRC 机器人队伍已经有三十多名队员了。
+    intro_zodiac: 成立于 2016 年 5 月
     learn_more: 了解更多
     at_a_glance: 查看
     first_robotics_competition: FRC 机器人竞赛
@@ -36,15 +43,23 @@ zh:
     school_intro: 创建于 1958 年，长期坚持“以质量立校，以科研兴校，以改革创新发展学校”的办学理念。
     school_website: 学校官网
     sponsors: 赞助商
-    sponsors_intro: 感谢下列赞助商的鼎力支持。
+    sponsors_intro: 感谢以下赞助商在 2018 赛季对我们的支持！
     friends: 友情链接
-    join_us: 加入我们
+    join_us: 联系我们
     join_us_intro: 如果您有兴趣加入 Zodiac，欢迎联系！
     join_us_slack: 加入 Slack 群聊
-    posts_intro: 我们也提供了编程和网站建设的教程。
-    posts: 文章
+    posts_intro: 我们提供编程和网站建设的教程。
+    posts: 所有文章
     members: 所有队员
     our_robot: 我们的机器人
     activities: 最近活动
     lang: English
     lang_url: /index.html
+    zodiac:
+      frc: FRC
+      dev: 队伍发展
+      resource: 队伍资源
+      club: 社团活动
+    contact:
+      email: 队伍邮箱
+      wechat: 微信公众号
