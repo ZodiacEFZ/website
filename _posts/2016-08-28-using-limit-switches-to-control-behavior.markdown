@@ -14,7 +14,7 @@ showcase: translation-command-based
 
 ## 限位开关提供了什么数据？
 
-{% img using-limit-switches-to-control-behavior/1.png %}
+{% asset using-limit-switches-to-control-behavior/1.png %}
 
 限位开关有“大概开启”和“大概关闭”两个输出。一般限位开关都被连接在 `Digital Input` 接口和地线上。电子输入端口有上拉电阻，保证限位开关开启时，输入是 1，限位开关关闭时，输入是 0（输入被连接到地线）。图中的限位开关有开启和关闭输出值。
 

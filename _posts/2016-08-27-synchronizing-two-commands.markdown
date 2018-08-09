@@ -65,13 +65,13 @@ public class CoopBridgeAutonomous extends CommandGroup {
 
 ## 流程图
 
-{% img synchronizing-two-commands/1.png %}
+{% asset synchronizing-two-commands/1.png %}
 
 以上的代码可以绘制成这样的流程图。请注意，并行添加的指令与之后的指令没有依赖关系。也就是说，即使现在已经在运行 `MoveBallToShooter` 指令了，并行的指令可能仍然在执行。主指令序列中（右侧的指令分支）的指令需要使用其他并行指令所需要的子系统时，并行指令才会被停止。比如，`FireSequence` 需要 `SetVirtualSetpoint` 指令所需要的子系统，那么 `SetVirtualSetpoint` 指令会在 `FireSequence` 指令被执行前才停止。
 
 ## 让一个指令等待之前的所有指令完成后执行
 
-{% img synchronizing-two-commands/2.png %}
+{% asset synchronizing-two-commands/2.png %}
 
 如果有一个顺序指令要等待两个并行指令完成后再执行，我们可以把用 `addParallel()` 这两个指令加到一个指令组里。接着这个指令组就能原先的指令组中作为顺序指令执行。这样的话，一个指令就可以等待多个并行指令全部结束后再执行了。
 

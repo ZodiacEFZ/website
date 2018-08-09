@@ -34,16 +34,16 @@ SkyZH 可以在 `Networktables` 中创建表格，并在表格中储存键值对
 
 安装 WPIlib 插件之后，你就可以在 `<用户目录>/wpilib/tools` 中找到应用程序。
 
-{% img '{{ "networking-roborio/smartdashboard-1.png" }}' %}
+{% asset '{{ "networking-roborio/smartdashboard-1.png" }}' %}
 
 `OutlineViewer` 是一个 `Networktables` 的监视工具。你可以在这个应用里看到所有的 `Networktables` 数据。
 
-{% img '{{ "networking-roborio/nt-1.png" }}' %}
+{% asset '{{ "networking-roborio/nt-1.png" }}' %}
 
 地址填写 `localhost`，当然在调试机器人时要填写 `roborio-xxxx-frc.local`。
 本地调试则点击 `Start Server` 运行服务器。调试机器人选择 `Start Client` 运行客户端。
 
-{% img '{{ "networking-roborio/nt-2.png" }}' %}
+{% asset '{{ "networking-roborio/nt-2.png" }}' %}
 
 在这个界面中就可以监视所有数值。
 
@@ -66,7 +66,7 @@ ntable.putString("testString", "Hello, World!");
 如果 `test` 原先设置成数字 233，而后又 `putString("test", "Hello!")` 就会报错。
 键的类型是不能改变的。
 
-{% img '{{ "networking-roborio/nt-3.png" }}' %}
+{% asset '{{ "networking-roborio/nt-3.png" }}' %}
 
 获取数据也十分简单。
 
@@ -226,7 +226,7 @@ getNumber("tragetSpeed", 0);
 
 安装 WPIlib 插件 之后，你就可以在 `<用户目录>/wpilib/tools` 中找到应用程序。
 
-{% img '{{ "networking-roborio/smartdashboard-1.png" }}' %}
+{% asset '{{ "networking-roborio/smartdashboard-1.png" }}' %}
 
 `OutlineViewer` 是一个 `Networktables` 的监视工具。你可以在这个应用里看到所有的 `Networktables` 数据。
 

@@ -11,4 +11,4 @@ By Facebook, Email or Wechat.
         
 ## Wechat
 
-{% img wechat-sub.png %}
+{% asset wechat-sub.png %}

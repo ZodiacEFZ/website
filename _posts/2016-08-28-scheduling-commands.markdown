@@ -18,13 +18,13 @@ showcase: translation-command-based
 
 ## 剖析指令式程序
 
-{% img scheduling-commands/1.png %}
+{% asset scheduling-commands/1.png %}
 
 这里展示了一个典型的指令式机器人程序的代码。`Scheduler.run()` 方法可以调用所有正在执行的指令的 `execute()` 和 `isFinished()` 方法。请忽略 Java 例子中的 `log()` 方法。
 
 ## `Scheduler.run` 方法：指令生命周期
 
-{% img scheduling-commands/2.png %}
+{% asset scheduling-commands/2.png %}
 
 这些行为不论在 C++ `Scheduler.Run()` 的指令式程序中还是 Java `Scheduler.run()` 的指令式程序中都会调用。这些行为也会在 Driver Station 以 20 毫秒或 50 毫秒为周期刷新的时候执行。下面的伪代码说明了每次调用 `run()` 方法的时候会发生什么。
 
@@ -65,7 +65,7 @@ public class Pickup extends CommandGroup {
 
 ## 指令组什么时候结束？
 
-{% img scheduling-commands/3.png %}
+{% asset scheduling-commands/3.png %}
 
 指令组在组合中所有启动的指令结束以后结束，不论指令是并行还是顺序添加的。比如很多指令都以顺序或者并行的方式被添加进来，指令组在这些指令全部完成以后结束。每个添加的指令被放在一个列表中。这些子指令执行完毕了，会从列表中移除。指令组在列表空时退出结束。
 
@@ -93,7 +93,7 @@ Scheduler.getInstance().removeAll();
 
 ## `requires()` 方法有什么用？
 
-{% img scheduling-commands/4.png %}
+{% asset scheduling-commands/4.png %}
 
 如果有许多指令需要同一个子系统才能执行，我们不能让这些指令同时执行。比如，机械爪系统有 `OpenClaw` 和 `CloseClaw` 两个指令需要。它们不能同时运行。每个需要用到机械爪子系统的指令都要在构造函数中 **1 - 调用 `requires()` (Java) 或者 `Requires()` (C++) 方法声明**。任何一个指令运行时，如果手柄按钮按下调用了其他指令，第二个指令会抢占第一个指令的资源。比如 `OpenClaw` 指令正在运行，点击按钮运行 `CloseClaw` 指令，那么 `OpenClaw` 指令就会被中断，**2 - 下一个周期中 `interrupted()` 方法被调用**，然后 `CloseClaw` 指令被调度。细细想来这种调度方法的确常用。如果你按下一个按钮打开机械爪，然后又突然反悔，那第一个指令的确应该被停止。
 

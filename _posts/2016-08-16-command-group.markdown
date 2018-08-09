@@ -16,7 +16,7 @@ INN，他可以 **按顺序** 或者 **同时** 完成一项或多项任务。
 
 ## 创建 CommandGroup
 
-{% img '{{ "command-group/create-1.png" }}' %}
+{% asset '{{ "command-group/create-1.png" }}' %}
 
 右击项目 - `Add` - `CommandGroup` 输入名称即可创建一个指令组。
 
@@ -44,7 +44,7 @@ public class TestCommandGroup extends CommandGroup {
 
 我们再回到之前的 Command-based Robot 中，探索如何运行 INN 器官。
 
-{% img '{{ "command-based-robot/xenial-2.png" }}' %}
+{% asset '{{ "command-based-robot/xenial-2.png" }}' %}
 
 在 `CommandGroup` 的构造函数里插入你的代码：
 
@@ -65,7 +65,7 @@ public class INNCommandGroup extends CommandGroup {
 
 *注：如果需要达到并联串联同时使用的效果，可以将一部分指令放在一个 CommandGroup 里，再将这个 CommandGroup 加到其他的 CommandGroup 里。*
 
-{% img '{{ "command-group/create-2.png" }}' %}
+{% asset '{{ "command-group/create-2.png" }}' %}
 
 比如这里可以将绿框内的 `Command` 放在一个 `CommandGroup` 里，标号 `7`，
 然后再创建一个 `CommandGroup`：

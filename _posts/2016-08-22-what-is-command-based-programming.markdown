@@ -23,7 +23,7 @@ WPILib 支持通过“指令式编程”，一种帮助我们更好地管理机�
 
 ## 指令和子系统
 
-{% img what-is-command-based-programming/1.png %}
+{% asset what-is-command-based-programming/1.png %}
 
 使用 WPILib 的指令式编程编写的程序，最终的工程都是由最基本的两部分组成的：**子系统**和**指令**。
 
@@ -33,19 +33,19 @@ WPILib 支持通过“指令式编程”，一种帮助我们更好地管理机�
 
 ## 指令是如何被执行的
 
-{% img what-is-command-based-programming/2.png %}
+{% asset what-is-command-based-programming/2.png %}
 
 指令使得我们可以把操作机器人的一整个步骤分割成一个个小的部分。每个指令都有一个 `execute()` (执行) 函数和一个 `isFinished()` (是否执行结束) 函数。这些函数在收到 Driver Station 的状态更新后执行，周期大约为 20 毫秒。我们可以组合并依次执行指令。
 
 ## 并行
 
-{% img what-is-command-based-programming/3.png %}
+{% asset what-is-command-based-programming/3.png %}
 
 有时我们需要几个行为同时执行来实现指定功能。在先前图中的例子里，可能需要在机械手腕转动的同时提升升降装置。我们可以通过**指令组**来启动数个并行执行的指令，甚至可以通过指令组来启动数个并行执行的指令组。
 
 ## 指令被以何种方式执行 —— 指令调度
 
-{% img what-is-command-based-programming/4.png %}
+{% asset what-is-command-based-programming/4.png %}
 
 机器人程序中主要有三种方式调用指令：
 
@@ -59,13 +59,13 @@ WPILib 支持通过“指令式编程”，一种帮助我们更好地管理机�
 
 ## 指令如何被调用 —— 指令的执行
 
-{% img what-is-command-based-programming/5.png %}
+{% asset what-is-command-based-programming/5.png %}
 
 调度器维护了一个当前正在执行的指令列表，在一个周期内调用每一个正在执行指令的 `execute()` 和 `isFinished()` 方法。显而易见，这些操作都可以不需要使用多线程多任务技术就能完成，这显著地降低了程序的复杂程度。每一个指令都有一个 `execute()` 函数和一个 `isFinished()` 函数。 `execute()` 函数执行让机器人一步步接近目标的程序； `isFinished()` 函数决定程序是否已经达到指令的目标。这两个函数都是不断地被周期性调用的。
 
 ## 指令组
 
-{% img what-is-command-based-programming/2.png %}
+{% asset what-is-command-based-programming/2.png %}
 
 复杂的指令是由一个个小的指令组合而成的。比如射击飞盘可能由“瞄准飞盘”、“向‘指令式编程’女神敬礼”、“扣动扳机”等一系列指令组成，一个接一个执行。可能这些一个接一个执行的指令中还有需要并行执行的指令。指令组是一个指令，但不需要自己定义 `isFinished()` 和 `execute()` 方法，因为它帮助我们接管一系列指令的执行。因此我们可以把许多小的指令组合起来，变成一个巨大的复杂的指令组。这种模块化思想是经常在软件工程中使用到的。每一个小指令都可以被单独测试，最后再测试指令组。指令组的相关教程可以在“创建指令组”这一篇教程中找到。
 

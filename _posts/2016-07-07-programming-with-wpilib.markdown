@@ -17,23 +17,23 @@ SkyZH 求助于聪明的你，希望你可以帮忙设计出这样的机器人�
 
 ## 创建机器人工程
 
-{% img '{{ "programming-with-wpilib/create-project-1.png" }}' %}
+{% asset '{{ "programming-with-wpilib/create-project-1.png" }}' %}
 
 打开 Eclipse，选择 `File` - `New` - `Others`
 
-{% img '{{ "programming-with-wpilib/create-project-2.png" }}' %}
+{% asset '{{ "programming-with-wpilib/create-project-2.png" }}' %}
 
 选择 `WPILib Robot Java Development` - `Robot Java Project`
 
-{% img '{{ "programming-with-wpilib/create-project-3.png" }}' %}
+{% asset '{{ "programming-with-wpilib/create-project-3.png" }}' %}
 
 填写项目名，选择 Sample Robot。
 
-{% img '{{ "programming-with-wpilib/create-project-4.png" }}' %}
+{% asset '{{ "programming-with-wpilib/create-project-4.png" }}' %}
 
 如果界面没有反应，点击左侧边栏上的放大键。
 
-{% img '{{ "programming-with-wpilib/create-project-5.png" }}' %}
+{% asset '{{ "programming-with-wpilib/create-project-5.png" }}' %}
 
 在 `Package Explorer` 中找到刚才创建项目中的 `Robot.java`
 
@@ -101,11 +101,11 @@ public class Robot extends SampleRobot {
 
 这时我们发现 `VictorSP` 下出现了红线。这说明这句语句出了问题。我们可以点击左边的小灯泡让 Eclipse 自动解决。
 
-{% img '{{ "programming-with-wpilib/bind-ctrl-1.png" }}' %}
+{% asset '{{ "programming-with-wpilib/bind-ctrl-1.png" }}' %}
 
 双击 `Import VictorSP` 将没有包含的库包含进程序中。
 
-{% img '{{ "programming-with-wpilib/bind-ctrl-2.png" }}' %}
+{% asset '{{ "programming-with-wpilib/bind-ctrl-2.png" }}' %}
 
 ### 编写逻辑
 

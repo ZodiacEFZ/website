@@ -114,7 +114,7 @@ Xenial 星人通过名为 INN 的系统进行身体各个器官的通讯。
 7. 等待两秒。
 8. 停止 XEN 器官旋转。
 
-{% img '{{ "command-based-robot/xenial-1.png" }}' %}
+{% asset '{{ "command-based-robot/xenial-1.png" }}' %}
 
 总之最后 Xenial 人就变成这个样子了。
 
@@ -132,7 +132,7 @@ Xenial 星人通过名为 INN 的系统进行身体各个器官的通讯。
 
 `2`, `3` 并行，其他顺序执行。
 
-{% img '{{ "command-based-robot/xenial-2.png" }}' %}
+{% asset '{{ "command-based-robot/xenial-2.png" }}' %}
 
 ## 开始 Command-based Programming
 
@@ -149,20 +149,20 @@ SkyZH 想，我们也能利用这种 **指令系统** 完成上面的扫地机�
 
 打开 Eclipse，创建 `Robot Java Project`。
 
-{% img '{{ "command-based-robot/tutorial-1.png" }}' %}
+{% asset '{{ "command-based-robot/tutorial-1.png" }}' %}
 
 在 `robot` 包中有三个类：
 
-{% img '{{ "command-based-robot/tutorial-2.png" }}' %}
+{% asset '{{ "command-based-robot/tutorial-2.png" }}' %}
 
 `Robot` 类是机器人的引导类。通过 `Robot` 可以控制自动期间、手动期间所需要执行的指令。
 
-{% img '{{ "command-based-robot/tutorial-3.png" }}' %}
+{% asset '{{ "command-based-robot/tutorial-3.png" }}' %}
 
 `RobotMap` 类是一个常量类，在这里写入每种控制器或传感器的端口号，这样在创建对象时就不用记录端口号了。
 比如 `Servo servo = new Servo(RobotMap.CleanerServoPort);` 另外在调试时也可以方便地更改端口号。
 
-{% img '{{ "command-based-robot/tutorial-4.png" }}' %}
+{% asset '{{ "command-based-robot/tutorial-4.png" }}' %}
 
 `OI` 类里保存了机器人所有传感器控制器的对象。在 `Robot` 类初始化时会创建一个 `OI` 对象，
 我们可以通过 `OI` 直接访问到机器人的所有设备。注意：`RobotMap` 储存端口号，
@@ -174,7 +174,7 @@ SkyZH 想，我们也能利用这种 **指令系统** 完成上面的扫地机�
 
 在 `org.usfirst.frc.teamxxxx.robot.subsystems` 包中右键新建，选择 `Others`。
 
-{% img '{{ "command-based-robot/tutorial-5.png" }}' %}
+{% asset '{{ "command-based-robot/tutorial-5.png" }}' %}
 
 双击 `Subsystem` 即可创建子系统。
 
@@ -347,4 +347,4 @@ UPDATE: 由于 `OI` 对象创建时机器人还没有完全初始化完毕，因
 
 第一个文档有 PDF 版。第二个文档可以在 Eclipse 中展开 `WPILib` 包查看。
 
-{% img '{{ "command-based-robot/api-reference-1.png" }}' %}
+{% asset '{{ "command-based-robot/api-reference-1.png" }}' %}

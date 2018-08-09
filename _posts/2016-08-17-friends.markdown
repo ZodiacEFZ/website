@@ -11,7 +11,7 @@ tags: 队伍 链接
 <div class="row text-xs-center">
   {% for sponsor in site.data.sponsors %}
   <div class="col-md-4">
-    {% img "sponsors/{{ sponsor.img }}" class:frc-sponsor-img alt:"{{sponsor.name}}" %}
+    {% asset "sponsors/{{ sponsor.img }}" class:frc-sponsor-img alt="{{sponsor.name}}" %}
     <h4 href="sponsor.link">{{ sponsor.name }}</h4>
     <small class="text-muted">{{ sponsor.description }}</small>
   </div>

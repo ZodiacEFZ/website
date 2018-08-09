@@ -10,16 +10,9 @@ title: Team 6353 | Zodiac
 email:
 description: Team 6353 Zodiac is a FIRST Robotics Competition Team.
 baseurl: ""
-url: "http://www.team6353.com"
 
 # Build settings
 markdown: CustomRedcarpetParser
-
-gems:
-  - jekyll-assets
-  - jekyll-sitemap
-  - octopress-minify-html
-  - bootstrap
 
 assets:
   compress:
@@ -27,22 +20,15 @@ assets:
     js: true
 
   autowrite: true
-  cdn: http://www.team6353.com
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
   prefix: "/assets"
   digest: true
 
-  sources:
-    - _assets/css
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/fonts
-    - _assets/img
-    - _assets/js
-
-  digest: true
+  caching:
+    path: ".jekyll-cache/assets"
+    type: file # Possible values: memory, file
+    enabled: true
 
 exclude:
   - vendor

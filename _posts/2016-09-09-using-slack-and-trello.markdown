@@ -14,19 +14,19 @@ tags: 机器人 Java 队伍 协作
 
 大雄首先打开了Zodiac 官网，直接硕大的机器人映入眼帘——姑且由之。
 
-{% img using-slack-and-trello/1.png %}
+{% asset using-slack-and-trello/1.png %}
 
 接着，在页面底部，有大雄开发的 Slack 入口。
 
-{% img using-slack-and-trello/2.png %}
+{% asset using-slack-and-trello/2.png %}
 
 点击“加入 Slack 群聊”。如果你没有梯子，用的又是电信宽带，那么，2333，你将进入漫长的等待。
 
-{% img using-slack-and-trello/3.png %}
+{% asset using-slack-and-trello/3.png %}
 
 大雄输入了校园邮箱用户名：nubidaxiong。点击 *Create Account*。一阵漫长的等待之后……大雄在校园邮箱的收件箱里找到了被各类通知覆盖的来自 21 世纪的 Slack 官方邮件。点击 *Complete Signup*。
 
-{% img using-slack-and-trello/4.png %}
+{% asset using-slack-and-trello/4.png %}
 
 想好帅气的 Username 之后，点击 *Create Account*，Slack 就注册好啦！
 
@@ -35,37 +35,37 @@ tags: 机器人 Java 队伍 协作
 接着是伟大的 Trello 教程。
 在 Slack 的由大雄设计的高端大气上档次的 HTML5 界面右侧，点击 *Direct Messages* 的 `+`。
 
-{% img using-slack-and-trello/5.png %}
+{% asset using-slack-and-trello/5.png %}
 
 点击 Trello。点击 Go。
 
-{% img using-slack-and-trello/6.png %}
+{% asset using-slack-and-trello/6.png %}
 
 这就进入到了你和 Trello 机器人的神奇对话界面。我伟大的民族领袖可看不到你们的秘密聊天呢！由于 Trello 是机器人，所以大雄只能用一种奇怪的语言和它交流。
 输入 `/trello setup` ，回车。Oops! 高冷的 Trello 回话啦！点击 *Link Trello Account*。
 
-{% img using-slack-and-trello/7.png %}
+{% asset using-slack-and-trello/7.png %}
 
-{% img using-slack-and-trello/8.png %}
+{% asset using-slack-and-trello/8.png %}
 
 点击 *Log In*
 
-{% img using-slack-and-trello/9.png %}
+{% asset using-slack-and-trello/9.png %}
 
 点击 *Create a Trello account*。收到验证邮件后点击 *Verify Address*。看到如下界面，就说明 Trello 已经成功注册了。
 
-{% img using-slack-and-trello/10.png %}
+{% asset using-slack-and-trello/10.png %}
 
 回到 Slack，点击 *Join Team*。接着就可以在 Trello 中看到 Zodiac 了。
 
-{% img using-slack-and-trello/11.png %}
+{% asset using-slack-and-trello/11.png %}
 
-{% img using-slack-and-trello/12.png %}
+{% asset using-slack-and-trello/12.png %}
 
 点击 `Boards` 进入任务面板，
 
-{% img using-slack-and-trello/13.png %}
+{% asset using-slack-and-trello/13.png %}
 
 点击 *Join Borad* 就可以编辑和查看所有内容，并且接收来自 Trello 的通知了。
 
-{% img using-slack-and-trello/14.png %}
+{% asset using-slack-and-trello/14.png %}

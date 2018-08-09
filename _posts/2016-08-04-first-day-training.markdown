@@ -10,12 +10,12 @@ tags: 新闻 创客营 日常
 
 <div class="row">
   <div class="col-md-6">
-    {% img "crc-training-0/IMG_2668.JPG" %}
+    {% asset "crc-training-0/IMG_2668.JPG" %}
   </div>
   <div class="col-md-6">
-    {% img "crc-training-0/IMG_2657.JPG" class="\"m-b-1\"" %}
+    {% asset "crc-training-0/IMG_2657.JPG" class="\"m-b-1\"" %}
 
-    {% img "crc-training-0/IMG_2672.JPG" %}
+    {% asset "crc-training-0/IMG_2672.JPG" %}
   </div>
 </div>
 

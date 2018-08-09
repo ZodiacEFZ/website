@@ -16,7 +16,7 @@ showcase: translation-command-based
 
 ## OI 类
 
-{% img running-commands-on-joystick-input/1.png %}
+{% asset running-commands-on-joystick-input/1.png %}
 
 指令式编程的模板里含有一个叫 `OI` 的类。在这里可以定义所有操作接口。如果使用 RobotBuilder 的话，这个文件可以在 `org.usfirst.frc####.NAME` 包中找到。
 

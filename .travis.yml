@@ -3,13 +3,16 @@ rvm:
 - 2.5.1
 cache:
   bundler: true
+  directories:
+     - .jekyll-cache/
 before_install:
 - gem update --system
 - gem --version
 - chmod +x ./_utils/*
+- chmod +x ./_jekyll_build.sh
 - "./_utils/ci_generate.sh"
 script:
-- bundle exec jekyll build
+- ./_jekyll_build.sh
 - "./_utils/ci_prepare_deploy.sh"
 after_success:
 - "./_utils/ci_deploy.sh"

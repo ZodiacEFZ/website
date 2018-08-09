@@ -23,7 +23,7 @@ tags: 队伍 介绍
           <img class="card-img-top member-info-avatar" src="{{ gravatar }}">
         {% endif %}
         {% if member.avatar %}
-          {% img '{{ member.avatar }}' class:"card-img-top member-info-avatar" %}
+          {% asset '{{ member.avatar }}' class="card-img-top member-info-avatar" %}
         {% endif %}
         <div class="card-block">
           <blockquote class="card-blockquote">

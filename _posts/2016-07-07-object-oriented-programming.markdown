@@ -20,20 +20,20 @@ Pisces000221 决定使用 **Java 面向对象** 的方法分析 Xenial 星人的
 
 我们先创建一个 Java 工程来尝试创建类。
 
-{% img '{{ "object-oriented-programming/oo-1.png" }}' %}
+{% asset '{{ "object-oriented-programming/oo-1.png" }}' %}
 
 点击 `Finish` 创建工程。
 
-{% img '{{ "object-oriented-programming/oo-2.png" }}' %}
+{% asset '{{ "object-oriented-programming/oo-2.png" }}' %}
 
 右击工程创建类。
 
-{% img '{{ "object-oriented-programming/oo-3.png" }}' %}
+{% asset '{{ "object-oriented-programming/oo-3.png" }}' %}
 
 填入 `Name`，勾选 `public static void main(String[] args)` 创建主程序所在的类。
 注意，创建其他类时**不需要勾选这一项**。
 
-{% img '{{ "object-oriented-programming/oo-4.png" }}' %}
+{% asset '{{ "object-oriented-programming/oo-4.png" }}' %}
 
 在创建的类中输入程序：
 
@@ -49,11 +49,11 @@ public class XenialMain {
 
 单击工具栏中的运行键即可运行程序。
 
-{% img '{{ "object-oriented-programming/oo-5.png" }}' %}
+{% asset '{{ "object-oriented-programming/oo-5.png" }}' %}
 
 此时在 Console 中会出现一句 `Hello, World!` 表明程序成功运行。
 
-{% img '{{ "object-oriented-programming/oo-6.png" }}' %}
+{% asset '{{ "object-oriented-programming/oo-6.png" }}' %}
 
 ## 在 Xenial 星球上
 

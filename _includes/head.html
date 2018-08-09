@@ -15,7 +15,7 @@
   {% capture mytitle %}{{ page.title }}{% endcapture %}
   <title>{% if page.title %}{{ mytitle | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="keywords" Content="Zodiac,FIRST,FRC,9036,机器人,竞赛,队伍">
+  <meta name="keywords" Content="Zodiac,FIRST,FRC,6353,机器人,竞赛,队伍">
   {% if site.build_target == 'QINIU' %}
     <link href="https://fonts.lug.ustc.edu.cn/css?family=Play|Amiko" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" rel="stylesheet">
@@ -28,8 +28,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.css" rel="stylesheet">
   {% endif %}
-  {% css "main.css" %}
-  {% css "syntax.css" %}
+  {% asset "main.css" %}
+  {% asset "syntax.css" %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
