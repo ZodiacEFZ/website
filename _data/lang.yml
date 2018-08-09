@@ -31,6 +31,10 @@ en:
     contact:
       email: Team Email
       wechat: Subscribe on Wechat
+    footer:
+      status: Status
+      contact: Contact
+      opensource: Open-Source
 zh:
   home:
     intro_zodiac: 成立于 2016 年 5 月
@@ -63,3 +67,7 @@ zh:
     contact:
       email: 队伍邮箱
       wechat: 微信公众号
+    footer:
+      status: 构建状态
+      contact: 联系
+      opensource: 开源项目
