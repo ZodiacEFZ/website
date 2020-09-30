@@ -1,4 +1,4 @@
-# website
+# Source for the website
 
 [![Build Status](https://travis-ci.org/ZodiacEFZ/website.svg?branch=master)](https://travis-ci.org/ZodiacEFZ/website) 
 
