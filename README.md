@@ -1,4 +1,4 @@
-# Source for the website
+# AhA! website
 
 [![Build Status](https://travis-ci.org/ZodiacEFZ/website.svg?branch=master)](https://travis-ci.org/ZodiacEFZ/website) 
 
@@ -10,7 +10,7 @@ We use Travis to automatically deploy our website on GitHub Pages and Qiniu.
 
 You can now view the site building status on Travis.
 
-## Deployment
+## Execution
 
 We use `Jekyll` to generate website pages, and then use Travis to deploy them.
 
@@ -24,7 +24,7 @@ In a word, **we do not use any cloud server**. CDN provides faster speed and
 better defense against DDOS. Only static files are hosted.
 We use GitHub to collaborate and update our website.
 
-## Discuss
+## let's Discuss
 
 We've enabled discuss on our site. In China mainland, you'll see a `duoshuo`
 plugin. Otherwise there'll be a `Disqus` plugin.
